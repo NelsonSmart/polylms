@@ -340,6 +340,34 @@ Route::get('/admin/map_google', function (){
     return view('admin_pages.map_google');
 })->name('map_google');
 
+Route::get('/admin/map_vector', function (){
+    return view('admin_pages.map_vector');
+})->name('map_vector');
+
+Route::get('/admin/sample_blank', function (){
+    return view('admin_pages.sample_blank');
+})->name('sample_blank');
+
+Route::get('/admin/sample_coming_soon', function (){
+    return view('admin_pages.sample_coming_soon');
+})->name('sample_coming_soon');
+
+Route::get('/admin/sample_coming_soon_1', function (){
+    return view('admin_pages.sample_coming_soon_1');
+})->name('sample_coming_soon_1');
+
+Route::get('/admin/sample_coming_soon_2', function (){
+    return view('admin_pages.sample_coming_soon_2');
+})->name('sample_coming_soon_2');
+
+Route::get('/admin/sample_coming_soon_3', function (){
+    return view('admin_pages.sample_coming_soon_3');
+})->name('sample_coming_soon_3');
+
+Route::get('/admin/sample_custom_scroll', function (){
+    return view('admin_pages.sample_custom_scroll');
+})->name('sample_custom_scroll');
+
 
 
 
