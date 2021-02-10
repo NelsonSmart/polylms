@@ -256,6 +256,90 @@ Route::get('/admin/extra_taskboard', function (){
     return view('admin_pages.extra_taskboard');
 })->name('extra_taskboard');
 
+Route::get('/admin/forms_advanced', function (){
+    return view('admin_pages.forms_advanced');
+})->name('forms_advanced');
+
+Route::get('/admin/forms_code_editor', function (){
+    return view('admin_pages.forms_code_editor');
+})->name('forms_code_editor');
+
+Route::get('/admin/forms_dropzone', function (){
+    return view('admin_pages.forms_dropzone');
+})->name('forms_dropzone');
+
+Route::get('/admin/forms_editor_markdown', function (){
+    return view('admin_pages.forms_editor_markdown');
+})->name('forms_editor_markdown');
+
+Route::get('/admin/forms_editors', function (){
+    return view('admin_pages.forms_editors');
+})->name('forms_editors');
+
+Route::get('/admin/forms_general', function (){
+    return view('admin_pages.forms_general');
+})->name('forms_general');
+
+Route::get('/admin/forms_mask', function (){
+    return view('admin_pages.forms_mask');
+})->name('forms_mask');
+
+Route::get('/admin/forms_validation', function (){
+    return view('admin_pages.forms_validation');
+})->name('forms_validation');
+
+Route::get('/admin/forms_wizard', function (){
+    return view('admin_pages.forms_wizard');
+})->name('forms_wizard');
+
+Route::get('/admin/forms_xeditable', function (){
+    return view('admin_pages.forms_xeditable');
+})->name('forms_xeditable');
+
+Route::get('/admin/icons_flog', function (){
+    return view('admin_pages.icons_flog');
+})->name('icons_flog');
+
+Route::get('/admin/icons_fontawesome', function (){
+    return view('admin_pages.icons_fontawesome');
+})->name('icons_fontawesome');
+
+Route::get('/admin/icons_glyphicons', function (){
+    return view('admin_pages.icons_glyphicons');
+})->name('icons_glyphicons');
+
+Route::get('/admin/icons_material', function (){
+    return view('admin_pages.icons_material');
+})->name('icons_material');
+
+Route::get('/admin/icons_simpleline', function (){
+    return view('admin_pages.icons_simpleline');
+})->name('icons_simpleline');
+
+Route::get('/admin/icons_themify', function (){
+    return view('admin_pages.icons_themify');
+})->name('icons_themify');
+
+Route::get('/admin/icons_weather', function (){
+    return view('admin_pages.icons_weather');
+})->name('icons_weather');
+
+Route::get('/admin/invoice', function (){
+    return view('admin_pages.invoice');
+})->name('invoice');
+
+Route::get('/admin/invoicelist', function (){
+    return view('admin_pages.invoicelist');
+})->name('invoicelist');
+
+Route::get('/admin/mailbox', function (){
+    return view('admin_pages.mailbox');
+})->name('mailbox');
+
+Route::get('/admin/map_google', function (){
+    return view('admin_pages.map_google');
+})->name('map_google');
+
 
 
 
