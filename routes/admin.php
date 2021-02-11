@@ -368,6 +368,122 @@ Route::get('/admin/sample_custom_scroll', function (){
     return view('admin_pages.sample_custom_scroll');
 })->name('sample_custom_scroll');
 
+Route::get('/admin/sample_faq', function (){
+    return view('admin_pages.sample_faq');
+})->name('sample_faq');
+
+Route::get('/admin/sample_gallery', function (){
+    return view('admin_pages.sample_gallery');
+})->name('sample_gallery');
+
+Route::get('/admin/sample_lightbox', function (){
+    return view('admin_pages.sample_lightbox');
+})->name('sample_lightbox');
+
+Route::get('/admin/sample_pricing', function (){
+    return view('admin_pages.sample_pricing');
+})->name('sample_pricing');
+
+Route::get('/admin/tables_color', function (){
+    return view('admin_pages.tables_color');
+})->name('tables_color');
+
+Route::get('/admin/tables_data', function (){
+    return view('admin_pages.tables_data');
+})->name('tables_data');
+
+Route::get('/admin/tables_editable', function (){
+    return view('admin_pages.tables_editable');
+})->name('tables_editable');
+
+Route::get('/admin/tables_simple', function (){
+    return view('admin_pages.tables_simple');
+})->name('tables_simple');
+
+Route::get('/admin/ui_badges', function (){
+    return view('admin_pages.ui_badges');
+})->name('ui_badges');
+
+Route::get('/admin/ui_border_utilities', function (){
+    return view('admin_pages.ui_border_utilities');
+})->name('ui_border_utilities');
+
+Route::get('/admin/ui_buttons', function (){
+    return view('admin_pages.ui_buttons');
+})->name('ui_buttons');
+
+Route::get('/admin/ui_color_utilities', function (){
+    return view('admin_pages.ui_color_utilities');
+})->name('ui_color_utilities');
+
+Route::get('/admin/ui_dropdown', function (){
+    return view('admin_pages.ui_dropdown');
+})->name('ui_dropdown');
+
+Route::get('/admin/ui_dropdown_grid', function (){
+    return view('admin_pages.ui_dropdown_grid');
+})->name('ui_dropdown_grid');
+
+Route::get('/admin/ui_grid', function (){
+    return view('admin_pages.ui_grid');
+})->name('ui_grid');
+
+Route::get('/admin/ui_progress_bars', function (){
+    return view('admin_pages.ui_progress_bars');
+})->name('ui_progress_bars');
+
+Route::get('/admin/ui_ribbons', function (){
+    return view('admin_pages.ui_ribbons');
+})->name('ui_ribbons');
+
+Route::get('/admin/ui_sliders', function (){
+    return view('admin_pages.ui_sliders');
+})->name('ui_sliders');
+
+Route::get('/admin/ui_tab', function (){
+    return view('admin_pages.ui_tab');
+})->name('ui_tab');
+
+Route::get('/admin/ui_timeline', function (){
+    return view('admin_pages.ui_timeline');
+})->name('ui_timeline');
+
+Route::get('/admin/ui_timeline_horizontal', function (){
+    return view('admin_pages.ui_timeline_horizontal');
+})->name('ui_timeline_horizontal');
+
+Route::get('/admin/ui_typography', function (){
+    return view('admin_pages.ui_typography');
+})->name('ui_typography');
+
+Route::get('/admin/widgets', function (){
+    return view('admin_pages.widgets');
+})->name('widgets');
+
+Route::get('/admin/widgets_blog', function (){
+    return view('admin_pages.widgets_blog');
+})->name('widgets_blog');
+
+Route::get('/admin/widgets_chart', function (){
+    return view('admin_pages.widgets_chart');
+})->name('widgets_chart');
+
+Route::get('/admin/widgets_list', function (){
+    return view('admin_pages.widgets_list');
+})->name('widgets_list');
+
+Route::get('/admin/widgets_social', function (){
+    return view('admin_pages.widgets_social');
+})->name('widgets_social');
+
+Route::get('/admin/widgets_statistic', function (){
+    return view('admin_pages.widgets_statistic');
+})->name('widgets_statistic');
+
+Route::get('/admin/widgets_weather', function (){
+    return view('admin_pages.widgets_weather');
+})->name('widgets_weather');
+
 
 
 
