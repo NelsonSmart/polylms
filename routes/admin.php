@@ -122,7 +122,7 @@ Route::get('/admin/component_date_paginator', function (){
 
 Route::get('/admin/component_media_advanced', function (){
     return view('admin_pages.component_media_advanced');
-})->name('component_madia_advanced');
+})->name('component_media_advanced');
 
 Route::get('/admin/component_modals', function (){
     return view('admin_pages.component_modals');
@@ -136,9 +136,9 @@ Route::get('/admin/component_notification', function (){
     return view('admin_pages.component_notification');
 })->name('component_notification');
 
-Route::get('/admin/component_portlet_draggeble', function (){
-    return view('admin_pages.component_portlet_draggeble');
-})->name('component_portlet_draggeble');
+Route::get('/admin/component_portlet_draggable', function (){
+    return view('admin_pages.component_portlet_draggable');
+})->name('component_portlet_draggable');
 
 Route::get('/admin/component_rangeslider', function (){
     return view('admin_pages.component_rangeslider');
@@ -296,9 +296,9 @@ Route::get('/admin/forms_xeditable', function (){
     return view('admin_pages.forms_xeditable');
 })->name('forms_xeditable');
 
-Route::get('/admin/icons_flog', function (){
-    return view('admin_pages.icons_flog');
-})->name('icons_flog');
+Route::get('/admin/icons_flag', function (){
+    return view('admin_pages.icons_flag');
+})->name('icons_flag');
 
 Route::get('/admin/icons_fontawesome', function (){
     return view('admin_pages.icons_fontawesome');
@@ -323,6 +323,10 @@ Route::get('/admin/icons_themify', function (){
 Route::get('/admin/icons_weather', function (){
     return view('admin_pages.icons_weather');
 })->name('icons_weather');
+
+Route::get('/admin/icons_cryptocoins', function (){
+    return view('admin_pages.icons_cryptocoins');
+})->name('icons_cryptocoins');
 
 Route::get('/admin/invoice', function (){
     return view('admin_pages.invoice');
