@@ -19,6 +19,43 @@ Route::get('/', function () {
 
 })->name('index');
 
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('about');
+
+Route::get('/about-2', function () {
+    return view('pages.about-2');
+})->name('about-2');
+
+Route::get('/about-3', function () {
+    return view('pages.about-3');
+})->name('about-3');
+
+Route::get('/blog', function () {
+    return view('pages.blog');
+})->name('blog');
+
+Route::get('/blog-details', function () {
+    return view('pages.blog-details');
+})->name('blog-details');
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
+
+Route::get('/course-details', function () {
+    return view('pages.course-details');
+})->name('course-details');
+
+Route::get('/course-details-2', function () {
+    return view('pages.course-details-2');
+})->name('course-details-2');
+
+Route::get('/courses', function () {
+    return view('pages.courses');
+})->name('courses');
+
+
 Route::get('/test', function () {
     return view('testing');
 })-> name('testing');
