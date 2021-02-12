@@ -179,7 +179,7 @@
             <div class="collapse navbar-collapse navbar-collapse-two" id="navbarNavAlt">
                <ul class="navbar-nav mt-4 mt-xl-0 mx-auto ml-xl-0">
                   <li class="nav-item dropdown active">
-                     <a class="nav-link dropdown-toggle" href="index-3.html" role="button" aria-haspopup="true" aria-expanded="false">
+                     <a class="nav-link dropdown-toggle" href="{{ route('index')}}" role="button" aria-haspopup="true" aria-expanded="false">
                         Home
                      </a>
                      
@@ -189,27 +189,27 @@
                         About <i class="fas fa-angle-down"></i>
                      </a>
                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="about.html">About Us 01</a></li>
-                        <li><a class="dropdown-item" href="about-2.html">About Us 02</a></li>
-                        <li><a class="dropdown-item" href="about-3.html">About Us 03</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about')}}">About Us 01</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about-2')}}">About Us 02</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about-3')}}">About Us 03</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="courses.html">Courses</a>
+                     <a class="nav-link" href="{{ route('courses')}}">Courses</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="blog.html">Blog</a>
+                     <a class="nav-link" href="{{ route('blog')}}">Blog</a>
                   </li>
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Pages <i class="fas fa-angle-down"></i>
                      </a>
                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                        <li><a class="dropdown-item" href="{{ route('blog-details')}}">Blog Details</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="contact.html">Contact Us</a>
+                     <a class="nav-link" href="{{ route('contact')}}">Contact Us</a>
                   </li>
                </ul>
 
@@ -265,42 +265,42 @@ online learning is possible
          <div class="col-md-12">
             <div class="owl-carousel course-carousel">
                <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
-                  <img class="img-fluid border mb-15" src="assets/images/course-categories/001.png" alt="">
+                  <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/001.png')}}" alt="">
                   <span>Design</span>
                </a>
                
                <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
-                  <img class="img-fluid border mb-15" src="assets/images/course-categories/002.jpg" alt="">
+                  <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/002.jpg')}}" alt="">
                   <span>Web Development</span>
                </a>
                
                <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
-                  <img class="img-fluid border mb-15" src="assets/images/course-categories/003.png" alt="">
+                  <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/003.png')}}" alt="">
                   <span>Personal Development</span>
                </a>
                
                <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
-                  <img class="img-fluid border mb-15" src="assets/images/course-categories/004.jpg" alt="">
+                  <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/004.jpg')}}" alt="">
                   <span>Software Development</span>
                </a>
                
                <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
-                  <img class="img-fluid border mb-15" src="assets/images/course-categories/005.png" alt="">
+                  <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/005.png')}}" alt="">
                   <span>Computer Engineering</span>
                </a>
                
                <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
-                  <img class="img-fluid border mb-15" src="assets/images/course-categories/006.jpeg" alt="">
+                  <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/006.jpeg')}}" alt="">
                   <span>Artifical Intelligence</span>
                </a>
                
                <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
-                  <img class="img-fluid border mb-15" src="assets/images/course-categories/007.jpeg" alt="">
+                  <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/007.jpeg')}}" alt="">
                   <span>Cyber-Security</span>
                </a>
                
                <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
-                  <img class="img-fluid border mb-15" src="assets/images/course-categories/008.png" alt="">
+                  <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/008.png')}}" alt="">
                   <span>Business</span>
                </a>
             </div>
@@ -322,7 +322,7 @@ online learning is possible
          </div>
          <div class="col-lg-4 col-md-5 col-sm-6">
             <div class="card course-card shadow mt-40">
-               <img class="card-img-top" src="assets/images/courses/07.jpg" alt="">
+               <img class="card-img-top" src="{{ asset('assets/assets/images/courses/07.jpg')}}" alt="">
                <div class="card-body p-30">
                   <h5 class="font-weight-600"><a href="#!" class="text-blue">The Business Intelligence
                      Analyst Course 2020</a></h5>
@@ -346,7 +346,7 @@ online learning is possible
          </div>
          <div class="col-lg-4 col-md-5 col-sm-6">
             <div class="card course-card shadow mt-40">
-               <img class="card-img-top" src="assets/images/courses/12.jpg" alt="">
+               <img class="card-img-top" src="{{ asset('assets/assets/images/courses/12.jpg')}}" alt="">
                <div class="card-body p-30">
                   <h5 class="font-weight-600"><a href="#!" class="text-blue">The Game Programming Course 2020</a></h5>
                   <p class="mt-2">Game Development is the art of creating games,describing the design, development and release of a game.
@@ -370,7 +370,7 @@ online learning is possible
          </div>
          <div class="col-lg-4 col-md-5 col-sm-6">
             <div class="card course-card shadow mt-40">
-               <img class="card-img-top" src="assets/images/courses/09.jpg" alt="">
+               <img class="card-img-top" src="{{ asset('assets/assets/images/courses/09.jpg')}}" alt="">
                <div class="card-body p-30">
                   <h5 class="font-weight-600"><a href="#!" class="text-blue">
                      3D Animation Course</a></h5>
@@ -394,7 +394,7 @@ online learning is possible
          </div>
          <div class="col-lg-4 col-md-5 col-sm-6">
             <div class="card course-card shadow mt-40">
-               <img class="card-img-top" src="assets/images/courses/10.jpg" alt="">
+               <img class="card-img-top" src="{{ asset('assets/assets/images/courses/10.jpg')}}" alt="">
                <div class="card-body p-30">
                   <h5 class="font-weight-600"><a href="#!" class="text-blue">Cisco Certificate Course (Beginner To Advanced)</a></h5>
                   <p class="mt-2">Cisco Certifications are the list of the Certifications offered by Cisco Systems. There are four or five (path to network designers) levels of certification: Entry (CCENT), Associate (CCNA/CCDA), Professional (CCNP/CCDP), Expert (CCI.... </p>
@@ -417,7 +417,7 @@ online learning is possible
          </div>
          <div class="col-lg-4 col-md-5 col-sm-6">
             <div class="card course-card shadow mt-40">
-               <img class="card-img-top" src="assets/images/courses/11.jpg" alt="">
+               <img class="card-img-top" src="{{ asset('assets/assets/images/courses/11.jpg')}}" alt="">
                <div class="card-body p-30">
                   <h5 class="font-weight-600"><a href="#!" class="text-blue">Java Programming Masterclass For Software Developers</a></h5>
                   <p class="mt-2">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended...</p>
@@ -445,15 +445,15 @@ online learning is possible
 
 
 <!-- start of video-section -->
-<section class="video-popup-section has-overlay bg-cover section-padding pb-0 mb-80" style="background-image: url(assets/images/video-bg.jpg);">
+<section class="video-popup-section has-overlay bg-cover section-padding pb-0 mb-80" style="background-image: url(assets/assets/images/video-bg.jpg);">
    <div class="container">
       <div class="row justify-content-center">
          <div class="col-lg-9">
             <div class="text-center text-white">
                <h2 class="h1 font-weight-bold">Intro Video</h2>
                <a href="https://www.youtube.com/watch?v=yD7b6R0-LQw" class="d-block has-overlay has-video-popup">
-                  <img class="img-fluid rounded" src="assets/images/video-thumb.jpg" alt="">
-                  <img class="play-btn" src="assets/images/video-btn.png" alt="">
+                  <img class="img-fluid rounded" src="{{ asset('assets/assets/images/video-thumb.jpg')}}" alt="">
+                  <img class="play-btn" src="{{ asset('assets/assets/images/video-btn.png')}}" alt="">
                </a>
             </div>
          </div>
@@ -477,15 +477,15 @@ online learning is possible
          </div>
          <div class="col-lg-7 mt-4 mt-lg-0">
             <div class="owl-carousel image-gallery">
-               <img class="img-fluid rounded" src="assets/images/gallery/01.jpg" alt="">
-               <img class="img-fluid rounded" src="assets/images/gallery/02.jpg" alt="">
-               <img class="img-fluid rounded" src="assets/images/gallery/03.jpg" alt="">
+               <img class="img-fluid rounded" src="{{ asset('assetsassets/images/gallery/01.jpg')}}" alt="">
+               <img class="img-fluid rounded" src="{{ asset('assetsassets/images/gallery/02.jpg')}}" alt="">
+               <img class="img-fluid rounded" src="{{ asset('assetsassets/images/gallery/03.jpg')}}" alt="">
             </div>
          </div>
       </div>
       <div class="row mt-115">
          <div class="col-md-12">
-            <div class="cta-section section-padding has-overlay bg-cover" style="background-image: url(assets/images/cta-bg.jpg);">
+            <div class="cta-section section-padding has-overlay bg-cover" style="background-image: url(assets/assets/images/cta-bg.jpg);">
                <div class="row justify-content-center">
                   <div class="col-lg-6 text-white text-center">
                      <h2 class="h1 font-weight-bold mb-20">50% Offer For Very First 50 Students That Log's In </h2>
@@ -503,16 +503,16 @@ online learning is possible
 
 
 <!-- start of students says -->
-<section class="section-padding bg-cover" style="background-image: url(assets/images/pattern-bg.jpg);">
+<section class="section-padding bg-cover" style="background-image: url(assets/assets/images/pattern-bg.jpg);">
    <div class="container">
       <div class="row justify-content-center">
          <div class="col-lg-7 position-relative">
             <div class="owl-carousel student-says-carousel">
                <div class="text-center bg-white py-5 px-4 px-md-5 rounded shadow">
-                  <img class="mb-30 mx-auto" src="assets/images/quote.jpg" alt="">
+                  <img class="mb-30 mx-auto" src="{{ asset('assets/assets/images/quote.jpg')}}" alt="">
                   <p>Announcing say boy precaution unaffected difficulty alteration him. Above be would at so going heard. Engaged at village at am equally proceed. Settle nay length almost ham direct extent. Agreement for listening remainder get attention law acuteness day. Now whatever surprise resolved elegance indulged own way outlived. </p>
                   <div class="media d-block d-sm-flex text-center text-sm-left justify-content-center mt-25">
-                     <img class="mx-auto mx-sm-0" src="assets/images/user-01.jpg" alt="">
+                     <img class="mx-auto mx-sm-0" src="{{ asset('assets/assets/images/user-01.jpg')}}" alt="">
                      <div class="ml-0 ml-sm-3 mt-3 mt-sm-0">
                         <h4 class="font-weight-600 text-blue mb-1">James Benzion</h4>
                         <p>Pittsburgh, USA</p>
@@ -520,10 +520,10 @@ online learning is possible
                   </div>
                </div>
                <div class="text-center bg-white py-5 px-4 px-md-5 rounded shadow">
-                  <img class="mb-30 mx-auto" src="assets/images/quote.jpg" alt="">
+                  <img class="mb-30 mx-auto" src="{{ asset('assets/assets/images/quote.jpg')}}" alt="">
                   <p>Announcing say boy precaution unaffected difficulty alteration him. Above be would at so going heard. Engaged at village at am equally proceed. Settle nay length almost ham direct extent. Agreement for listening remainder get attention law acuteness day. Now whatever surprise resolved elegance indulged own way outlived. </p>
                   <div class="media d-block d-sm-flex text-center text-sm-left justify-content-center mt-25">
-                     <img class="mx-auto mx-sm-0" src="assets/images/user-05.png" alt="">
+                     <img class="mx-auto mx-sm-0" src="{{ asset('assets/assets/images/user-05.png')}}" alt="">
                      <div class="ml-0 ml-sm-3 mt-3 mt-sm-0">
                         <h4 class="font-weight-600 text-blue mb-1">JAck Barker</h4>
                         <p>Pittsburgh, USA</p>
@@ -531,10 +531,10 @@ online learning is possible
                   </div>
                </div>
                <div class="text-center bg-white py-5 px-4 px-md-5 rounded shadow">
-                  <img class="mb-30 mx-auto" src="assets/images/quote.jpg" alt="">
+                  <img class="mb-30 mx-auto" src="{{ asset('assets/assets/images/quote.jpg')}}" alt="">
                   <p>Announcing say boy precaution unaffected difficulty alteration him. Above be would at so going heard. Engaged at village at am equally proceed. Settle nay length almost ham direct extent. Agreement for listening remainder get attention law acuteness day. Now whatever surprise resolved elegance indulged own way outlived. </p>
                   <div class="media d-block d-sm-flex text-center text-sm-left justify-content-center mt-25">
-                     <img class="mx-auto mx-sm-0" src="assets/images/user-06.png" alt="">
+                     <img class="mx-auto mx-sm-0" src="{{ asset('assets/assets/images/user-06.png')}}" alt="">
                      <div class="ml-0 ml-sm-3 mt-3 mt-sm-0">
                         <h4 class="font-weight-600 text-blue mb-1">Jesmin Benzion</h4>
                         <p>Pittsburgh, USA</p>
@@ -572,7 +572,7 @@ online learning is possible
             <div class="owl-carousel instructors-carousel">
                <div class="card instructors-item border-0">
                   <div class="position-relative">
-                     <img src="assets/images/instructors/01.jpg" alt="" class="card-img-top">
+                     <img src="{{ asset('assets/assets/images/instructors/01.jpg')}}" alt="" class="card-img-top">
                      <div class="instructor-social text-center">
                         <a href="#!" class="p-3 text-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#!" class="p-3 text-link"><i class="fab fa-twitter"></i></a>
@@ -587,7 +587,7 @@ online learning is possible
                </div>
                <div class="card instructors-item border-0">
                   <div class="position-relative">
-                     <img src="assets/images/instructors/02.jpg" alt="" class="card-img-top">
+                     <img src="{{ asset('assets/assets/images/instructors/02.jpg')}}" alt="" class="card-img-top">
                      <div class="instructor-social text-center">
                         <a href="#!" class="p-3 text-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#!" class="p-3 text-link"><i class="fab fa-twitter"></i></a>
@@ -602,7 +602,7 @@ online learning is possible
                </div>
                <div class="card instructors-item border-0">
                   <div class="position-relative">
-                     <img src="assets/images/instructors/03.jpg" alt="" class="card-img-top">
+                     <img src="{{ asset('assets/assets/images/instructors/03.jpg')}}" alt="" class="card-img-top">
                      <div class="instructor-social text-center">
                         <a href="#!" class="p-3 text-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#!" class="p-3 text-link"><i class="fab fa-twitter"></i></a>
@@ -617,7 +617,7 @@ online learning is possible
                </div>
                <div class="card instructors-item border-0">
                   <div class="position-relative">
-                     <img src="assets/images/instructors/02.jpg" alt="" class="card-img-top">
+                     <img src="{{ asset('assets/assets/images/instructors/02.jpg')}}" alt="" class="card-img-top">
                      <div class="instructor-social text-center">
                         <a href="#!" class="p-3 text-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#!" class="p-3 text-link"><i class="fab fa-twitter"></i></a>
@@ -647,7 +647,7 @@ online learning is possible
          </div>
          <div class="col-lg-4 col-md-6">
             <div class="card shadow border-0 mt-40 hover-grayscale">
-               <a href="#!"><img class="card-img-top" src="assets/images/blogs/01.jpg" alt=""></a>
+               <a href="#!"><img class="card-img-top" src="{{ asset('assets/assets/images/blogs/01.jpg')}}" alt=""></a>
                <div class="card-body border-top p-30">
                   <div class="post-meta font-weight-500 small mb-20">
                      <span class="mr-3"><i class="far fa-calendar-alt text-primary mr-2"></i> 12/03/2020</span>
@@ -660,7 +660,7 @@ online learning is possible
          </div>
          <div class="col-lg-4 col-md-6">
             <div class="card shadow border-0 mt-40 hover-grayscale">
-               <a href="#!"><img class="card-img-top" src="assets/images/blogs/02.jpg" alt=""></a>
+               <a href="#!"><img class="card-img-top" src="{{ asset('assets/assets/images/blogs/02.jpg')}}" alt=""></a>
                <div class="card-body border-top p-30">
                   <div class="post-meta font-weight-500 small mb-20">
                      <span class="mr-3"><i class="far fa-calendar-alt text-primary mr-2"></i> 25/02/2020</span>
@@ -673,7 +673,7 @@ online learning is possible
          </div>
          <div class="col-lg-4 col-md-6">
             <div class="card shadow border-0 mt-40 hover-grayscale">
-               <a href="#!"><img class="card-img-top" src="assets/images/blogs/03.jpg" alt=""></a>
+               <a href="#!"><img class="card-img-top" src="{{ asset('assets/assets/images/blogs/03.jpg')}}" alt=""></a>
                <div class="card-body border-top p-30">
                   <div class="post-meta font-weight-500 small mb-20">
                      <span class="mr-3"><i class="far fa-calendar-alt text-primary mr-2"></i> 18/09/2020</span>
@@ -799,7 +799,7 @@ online learning is possible
       <div class="container">
          <div class="row align-items-center">
             <div class="col-lg-9 text-center text-lg-left mb-3 mb-lg-0">
-               &copy; Copyright All Review <span class="text-primary"><img src="assets/images/logo.png" height="30"> </span>
+            &copy; 2021 - {{date('Y')}} <span class="text-primary"><a href="{{ url('/')}}">PolyNekTechCommunity</a></span>. All Rights Reserved. 
             </div>
             <div class="col-lg-3 text-center text-lg-right">
                <ul class="list-unstyled list-inline">
