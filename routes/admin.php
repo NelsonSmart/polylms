@@ -12,7 +12,7 @@ use App\Http\Controllers\Auth_admin\VerifyEmailController;
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/admin', function () {
     return view('admin_pages.index');
 }) -> name('admin_index');
 
