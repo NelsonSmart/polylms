@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from www.multipurposethemes.com/admin/eduadmin-template/main/email_expired_card.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Jan 2021 11:17:35 GMT -->
+
 <head>
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -226,5 +226,4 @@
 
 </body>
 
-<!-- Mirrored from www.multipurposethemes.com/admin/eduadmin-template/main/email_expired_card.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Jan 2021 11:17:35 GMT -->
 </html>
