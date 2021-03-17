@@ -9,18 +9,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <!-- ** Plugins Needed for the Project ** -->
-  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="vendors/jquery-nice-select/nice-select.css">
-  <link rel="stylesheet" href="vendors/OwlCarousel2/owl.carousel.min.css">
-  <link rel="stylesheet" href="vendors/magnific-popup/css/magnific-popup.css">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/jquery-nice-select/nice-select.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/OwlCarousel2/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/magnific-popup/css/magnific-popup.css')}}">
 
   <!-- Main Stylesheet -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
   
   <!--Favicon-->
-  <link rel="shortcut icon" href="assets/images/free-class.png" type="image/png">
+  <link rel="shortcut icon" href="{{ asset('assets/assets/images/free-class.png')}}" type="image/png">
 
 </head>
 
@@ -146,7 +145,7 @@
    <div class="container-lg">
       <nav class="navbar navbar-expand-xl navbar-dark px-0">
          <a class="navbar-brand" href="index-3.html">
-            <img id="logp"  src="assets/images/logo-2.png" alt="" style="height:49px">
+            <img id="logp"  src="{{ asset('assets/assets/images/logo-2.png')}}" type="image/png" alt="" style="height:49px" >
          </a>
 
          <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarNavAlt" aria-controls="navbarNavAlt" aria-expanded="false" aria-label="Toggle navigation">
@@ -203,7 +202,7 @@
 </header>
 
 <!-- start of page-header -->
-<section class="page-header bg-cover has-overlay" style="background-image: url(assets/images/page-header-02.jpg)">
+<section class="page-header bg-cover has-overlay" style="background-image: url('assets/assets/images/page-header-02.jpg')">
    <div class="container">
       <div class="row">
          <div class="col-12 text-center">
@@ -309,7 +308,7 @@
       <div class="row align-items-center">
          <div class="col-lg-12">
             <a href="https://www.google.com/maps/place/Federal+Polytechnic,+Nekede,+Owerri/@5.4795496,7.0294221,48m/data=!3m1!1e3!4m5!3m4!1s0x10425953526b4bcf:0x46c2c2b2e67f46df!8m2!3d5.4794628!4d7.0293604" class="map-image" target="_blank">
-               <img src="assets/images/map-img.jpg" alt="">
+               <img src="{{ asset('assets/assets/images//map-img.jpg')}}" type="image/png" alt="">
                <span class="map-text h4"><i class="fas fa-external-link-alt mr-2"></i> View us on Map</span>
             </a>
          </div>
@@ -331,7 +330,7 @@
                   <li class="list-inline-item"><a href="about.html" class="p-2 d-block text-link">About</a></li>
                   <li class="list-inline-item"><a href="courses.html" class="p-2 d-block text-link">Courses</a></li>
                   <li class="list-inline-item"><a href="blog.html" class="p-2 d-block text-link">Blog</a></li>
-                  <li class="list-inline-item"><a href="contact.html" class="p-2 d-block text-link">Contact us</a></li>
+                  <li class="list-inline-item"><a href="contact.blade.php" class="p-2 d-block text-link">Contact us</a></li>
                </ul>
             </div>
             <div class="col-lg-3 text-center text-lg-right">
@@ -349,7 +348,7 @@
       <div class="container">
          <div class="row align-items-center">
             <div class="col-lg-9 text-center text-lg-left mb-3 mb-lg-0">
-               &copy; Copyright All Review <img src="assets/images/logo.png" height="30">
+               &copy; Copyright All Review <img src="{{ asset('assets/assets/images/logo.png')}}" height="30">
             </div>
             <div class="col-lg-3 text-center text-lg-right">
                <ul class="list-unstyled list-inline font-weight-500">
@@ -365,17 +364,16 @@
    <span class="fas fa-chevron-up"></span>
 </a>
 
-<!-- jQuery -->
-<script src="vendors/jQuery/jquery.min.js"></script>
-<script src="vendors/bootstrap/bootstrap.min.js"></script>
-<script src="vendors/jquery-nice-select/jquery.nice-select.min.js"></script>
-<script src="vendors/OwlCarousel2/owl.carousel.min.js"></script>
-<script src="vendors/counterup/waypoints.min.js"></script>
-<script src="vendors/counterup/jquery.counterup.min.js"></script>
-<script src="vendors/magnific-popup/js/magnific-popup.min.js"></script>
+<script src="{{ asset('assets/vendors/jQuery/jquery.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/jquery-nice-select/jquery.nice-select.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/OwlCarousel2/owl.carousel.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/waypoints.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/jquery.counterup.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/magnific-popup/js/magnific-popup.min.js')}}"></script>
 
 <!-- Main Script -->
-<script src="assets/js/script.js"></script>
+<script src="{{ asset('assets/assets/js/script.js')}}"></script>
 
 </body>
 </html>

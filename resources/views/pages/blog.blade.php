@@ -2,24 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="refresh" content="30">
   <title>PolyNekTech- Tutor Online Courses</title>
-
+<meta http-equiv="refresh" content="10">
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <!-- ** Plugins Needed for the Project ** -->
-  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="vendors/jquery-nice-select/nice-select.css">
-  <link rel="stylesheet" href="vendors/OwlCarousel2/owl.carousel.min.css">
-  <link rel="stylesheet" href="vendors/magnific-popup/css/magnific-popup.css">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/jquery-nice-select/nice-select.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/OwlCarousel2/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/magnific-popup/css/magnific-popup.css')}}">
 
   <!-- Main Stylesheet -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
   
   <!--Favicon-->
-  <link rel="shortcut icon" href="assets/images/free-class.png" type="image/png">
+   <link rel="shortcut icon" href="{{ asset('assets/assets/images/free-class.png')}}" type="image/png">
 
 </head>
 
@@ -97,10 +99,10 @@
             <div class="modal-body p-3 p-sm-4">
                <ul class="nav nav-pills nav-justified tab-nav" id="myTab" role="tablist">
                   <li class="nav-item" role="presentation">
-                     <a class="nav-link active" id="guardian-tab" data-toggle="tab" href="#guardian" role="tab" aria-controls="guardian" aria-selected="true"><img src="assets/images/guardian.png" class="mr-2" alt="" style="height:45px"> Login as<br>Student</a>
+                     <a class="nav-link active" id="guardian-tab" data-toggle="tab" href="#guardian" role="tab" aria-controls="guardian" aria-selected="true"><img src="{{ asset('assets/assets/images/guardian.png')}}" class="mr-2" alt="" style="height:45px"> Login as<br>Student</a>
                   </li>
                   <li class="nav-item" role="presentation">
-                     <a class="nav-link" id="tutor-tab" data-toggle="tab" href="#tutor" role="tab" aria-controls="tutor" aria-selected="false"><img src="assets/images/tutor.png" class="mr-2" alt="" style="height:45px"> Login as<br>Tutor</a>
+                     <a class="nav-link" id="tutor-tab" data-toggle="tab" href="#tutor" role="tab" aria-controls="tutor" aria-selected="false"><img src="{{ asset('assets/assets/images/tutor.png')}}" class="mr-2" alt="" style="height:45px"> Login as<br>Tutor</a> 
                   </li>
                </ul>
                <div class="tab-content" id="myTabContent">
@@ -144,8 +146,8 @@
 <header class="bg-blue shadow">
    <div class="container-lg">
       <nav class="navbar navbar-expand-xl navbar-dark px-0">
-         <a class="navbar-brand" href="index-3.html">
-            <img id="logo-q"  src="assets/images/logo.png" alt="" style="height:49px">
+         <a class="navbar-brand" href="index">
+            <img id="logo-q" src="{{ asset('assets/assets/images/logo.png')}}" alt="" style="height:49px">
          </a>
          <form class="navbar-form search-only d-none d-md-flex" action="#" method="post">
             <div class="input-group">
@@ -163,7 +165,7 @@
                <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
                <li><a href="#!"><i class="fab fa-skype"></i></a></li>
             </ul>
-            <a href="#!" class="btn btn-sm btn-primary rounded-pill" data-toggle="modal" data-target="#signup-modal">Become A Tutor</a>
+            <a href="#signin-modal" class="btn btn-sm btn-primary rounded-pill" data-toggle="modal" data-target="#signup-modal">Become A Tutor</a>
          </div>
 
          <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarNavAlt" aria-controls="navbarNavAlt" aria-expanded="false" aria-label="Toggle navigation">
@@ -177,7 +179,7 @@
             <div class="collapse navbar-collapse navbar-collapse-two" id="navbarNavAlt">
                <ul class="navbar-nav mt-4 mt-xl-0 mx-auto ml-xl-0">
                   <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="index-3.html" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="{{ route('index')}}" role="button" aria-haspopup="true" aria-expanded="false">
                         Home
                      </a>
 
@@ -187,16 +189,16 @@
                         About <i class="fas fa-angle-down"></i>
                      </a>
                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="about.html">About Us 01</a></li>
-                        <li><a class="dropdown-item" href="about-2.html">About Us 02</a></li>
-                        <li><a class="dropdown-item" href="about-3.html">About Us 03</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about')}}">About Us 01</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about-2')}}">About Us 02</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about-3')}}">About Us 03</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="courses.html">Courses</a>
+                     <a class="nav-link" href="{{ route('courses')}}">Courses</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="blog.html">Blog</a>
+                     <a class="nav-link" href="{{ route('blog')}}">Blog</a>
                   </li>
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -204,11 +206,11 @@
                      </a>
                      <ul class="dropdown-menu">
 
-                        <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                        <li><a class="dropdown-item" href="{{ route('blog-details')}}">Blog Details</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="contact.html">Contact Us</a>
+                     <a class="nav-link" href="{{ route('contact')}}">Contact Us</a>
                   </li>
                </ul>
 
@@ -230,7 +232,7 @@
             <h2 class="section-title font-weight-bold mb-20">Latest Blogs</h2>
             <nav aria-label="breadcrumb">
                <ol class="breadcrumb bg-transparent p-0 font-weight-600 mb-0">
-                  <li class="breadcrumb-item active" aria-current="page"><a class="text-primary" href="index-3.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><a class="text-primary" href="{{ route('index')}}">Home</a></li>
                   <li class="breadcrumb-item">Blogs</li>
                </ol>
             </nav>
@@ -247,7 +249,7 @@
       <div class="row">
          <div class="col-lg-4 col-md-6">
             <div class="card shadow border-0 mb-40 hover-grayscale">
-               <a href="#!"><img class="card-img-top" src="assets/images/blogs/01.jpg" alt=""></a>
+               <a href="#!"><img class="card-img-top" src="{{ asset('assets/assets/images/blogs/01.jpg')}}" alt=""></a>
                <div class="card-body border-top p-30">
                   <div class="post-meta font-weight-500 small mb-20">
                      <span class="mr-3"><i class="far fa-calendar-alt text-primary mr-2"></i> 25/02/2020</span>
@@ -260,7 +262,7 @@
          </div>
          <div class="col-lg-4 col-md-6">
             <div class="card shadow border-0 mb-40 hover-grayscale">
-               <a href="#!"><img class="card-img-top" src="assets/images/blogs/02.jpg" alt=""></a>
+               <a href="#!"><img class="card-img-top" src="{{ asset('assets/assets/images/blogs/02.jpg')}}" alt=""></a>
                <div class="card-body border-top p-30">
                   <div class="post-meta font-weight-500 small mb-20">
                      <span class="mr-3"><i class="far fa-calendar-alt text-primary mr-2"></i> 30/05/2020</span>
@@ -273,7 +275,7 @@
          </div>
          <div class="col-lg-4 col-md-6">
             <div class="card shadow border-0 mb-40 hover-grayscale">
-               <a href="#!"><img class="card-img-top" src="assets/images/blogs/03.jpg" alt=""></a>
+               <a href="#!"><img class="card-img-top" src="{{ asset('assets/assets/images/blogs/03.jpg')}}" alt=""></a>
                <div class="card-body border-top p-30">
                   <div class="post-meta font-weight-500 small mb-20">
                      <span class="mr-3"><i class="far fa-calendar-alt text-primary mr-2"></i> 12/03/2020</span>
@@ -286,7 +288,7 @@
          </div>
          <div class="col-lg-4 col-md-6">
             <div class="card shadow border-0 mb-40 hover-grayscale">
-               <a href="#!"><img class="card-img-top" src="assets/images/blogs/02.jpg" alt=""></a>
+               <a href="#!"><img class="card-img-top" src="{{ asset('assets/assets/images/blogs/02.jpg')}}" alt=""></a>
                <div class="card-body border-top p-30">
                   <div class="post-meta font-weight-500 small mb-20">
                      <span class="mr-3"><i class="far fa-calendar-alt text-primary mr-2"></i> 25/02/2020</span>
@@ -299,7 +301,7 @@
          </div>
          <div class="col-lg-4 col-md-6">
             <div class="card shadow border-0 mb-40 hover-grayscale">
-               <a href="#!"><img class="card-img-top" src="assets/images/blogs/03.jpg" alt=""></a>
+               <a href="#!"><img class="card-img-top" src="{{ asset('assets/assets/images/blogs/03.jpg')}}" alt=""></a>
                <div class="card-body border-top p-30">
                   <div class="post-meta font-weight-500 small mb-20">
                      <span class="mr-3"><i class="far fa-calendar-alt text-primary mr-2"></i> 18/09/2020</span>
@@ -312,7 +314,7 @@
          </div>
          <div class="col-lg-4 col-md-6">
             <div class="card shadow border-0 mb-40 hover-grayscale">
-               <a href="#!"><img class="card-img-top" src="assets/images/blogs/01.jpg" alt=""></a>
+               <a href="#!"><img class="card-img-top" src="{{ asset('assets/assets/images/blogs/01.jpg')}}" alt=""></a>
                <div class="card-body border-top p-30">
                   <div class="post-meta font-weight-500 small mb-20">
                      <span class="mr-3"><i class="far fa-calendar-alt text-primary mr-2"></i> 12/03/2020</span>
@@ -435,7 +437,7 @@
                </ul>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 mt-5 mt-xl-0">
-               <img src="../../../www.s7template.com/tf/eduskills/images/logo.html" alt="">
+              
                <p class="mt-15">Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building.</p>
                <div class="mt-30">
                   <a href="#!" class="pr-3 text-light"><i class="fab fa-facebook-f"></i></a>
@@ -445,13 +447,13 @@
                </div>
             </div>
          </div>
-      </div>
+      </div> 
    </div>
    <div class="footer-bottom text-light py-3 border-dark border-top">
       <div class="container">
          <div class="row align-items-center">
             <div class="col-lg-9 text-center text-lg-left mb-3 mb-lg-0">
-               &copy; Copyright All Review <span class="text-primary"><img src="assets/images/logo.png" height="30"> </span>
+               &copy; Copyright All Review <span class="text-primary"><img src="{{ asset('assets/assets/images/logo.png')}}" height="30"> </span>
             </div>
             <div class="col-lg-3 text-center text-lg-right">
                <ul class="list-unstyled list-inline">
@@ -470,16 +472,16 @@
 </a>
 
 <!-- jQuery -->
-<script src="vendors/jQuery/jquery.min.js"></script>
-<script src="vendors/bootstrap/bootstrap.min.js"></script>
-<script src="vendors/jquery-nice-select/jquery.nice-select.min.js"></script>
-<script src="vendors/OwlCarousel2/owl.carousel.min.js"></script>
-<script src="vendors/counterup/waypoints.min.js"></script>
-<script src="vendors/counterup/jquery.counterup.min.js"></script>
-<script src="vendors/magnific-popup/js/magnific-popup.min.js"></script>
+<script src="{{ asset('assets/vendors/jQuery/jquery.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/jquery-nice-select/jquery.nice-select.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/OwlCarousel2/owl.carousel.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/waypoints.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/jquery.counterup.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/magnific-popup/js/magnific-popup.min.js')}}"></script>
 
 <!-- Main Script -->
-<script src="assets/js/script.js"></script>
+<script src="{{ asset('assets/assets/js/script.js')}}"></script>
 
 </body>
 

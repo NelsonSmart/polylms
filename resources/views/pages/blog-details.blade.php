@@ -10,17 +10,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <!-- ** Plugins Needed for the Project ** -->
-  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="vendors/jquery-nice-select/nice-select.css">
-  <link rel="stylesheet" href="vendors/OwlCarousel2/owl.carousel.min.css">
-  <link rel="stylesheet" href="vendors/magnific-popup/css/magnific-popup.css">
+  <link rel="{{ asset('assets/stylesheet" href="vendors/bootstrap/bootstrap.min.css')}}">
+  <link rel="{{ asset('assets/stylesheet" href="vendors/fontawesome/css/all.min.css')}}">
+  <link rel="{{ asset('assets/stylesheet" href="vendors/jquery-nice-select/nice-select.css')}}">
+  <link rel="{{ asset('assets/stylesheet" href="vendors/OwlCarousel2/owl.carousel.min.css')}}">
+  <link rel="{{ asset('assets/stylesheet" href="vendors/magnific-popup/css/magnific-popup.css')}}">
 
   <!-- Main Stylesheet -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{{ asset('assets/assets/css/style.css')}}" rel="stylesheet">
   
   <!--Favicon-->
-  <link rel="shortcut icon" href="assets/images/free-class.png"type="image/png">
+  <link rel="shortcut icon" href="{{ asset('assets/assets/images/free-class.png')}}"type="image/png">
 
 </head>
 
@@ -520,16 +520,16 @@
 </a>
 
 <!-- jQuery -->
-<script src="vendors/jQuery/jquery.min.js"></script>
-<script src="vendors/bootstrap/bootstrap.min.js"></script>
-<script src="vendors/jquery-nice-select/jquery.nice-select.min.js"></script>
-<script src="vendors/OwlCarousel2/owl.carousel.min.js"></script>
-<script src="vendors/counterup/waypoints.min.js"></script>
-<script src="vendors/counterup/jquery.counterup.min.js"></script>
-<script src="vendors/magnific-popup/js/magnific-popup.min.js"></script>
+<script src="{{ asset('assets/vendors/jQuery/jquery.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/jquery-nice-select/jquery.nice-select.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/OwlCarousel2/owl.carousel.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/waypoints.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/jquery.counterup.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/magnific-popup/js/magnific-popup.min.js')}}"></script>
 
 <!-- Main Script -->
-<script src="assets/js/script.js"></script>
+<script src="{{ asset('assets/assets/js/script.js')}}"></script>
 
 </body>
 </html>

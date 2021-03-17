@@ -5,22 +5,24 @@
   <meta charset="utf-8">
   <title>PolyNekTech - Tutor Online Courses </title>
 
+ 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <!-- ** Plugins Needed for the Project ** -->
-  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="vendors/jquery-nice-select/nice-select.css">
-  <link rel="stylesheet" href="vendors/OwlCarousel2/owl.carousel.min.css">
-  <link rel="stylesheet" href="vendors/magnific-popup/css/magnific-popup.css">
+   <!-- ** Plugins Needed for the Project ** -->
+   <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/jquery-nice-select/nice-select.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/OwlCarousel2/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/magnific-popup/css/magnific-popup.css')}}">
 
   <!-- Main Stylesheet -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{{ asset('assets/assets/css/style.css')}}" rel="stylesheet">
   
   <!--Favicon-->
-  <link rel="shortcut icon" href="assets/images/free-class.png" type="image/png">
+  <link rel="shortcut icon" href="{{ asset('assets/assets/images/free-class.png')}}" type="image/png">
 
 </head>
 
@@ -146,7 +148,7 @@
    <div class="container-lg">
       <nav class="navbar navbar-expand-xl navbar-dark px-0">
          <a class="navbar-brand" href="index-3.html">
-            <img id="logo-q"  src="assets/images/logo.png" alt="" style="height:49px">
+            <img id="logo-q"  src="{{ asset('assets/assets/images/logo.png')}}" alt="" style="height:49px">
          </a>
 
          <div class="d-none d-md-flex align-items-center ml-auto">
@@ -190,7 +192,7 @@
                <ul class="navbar-nav ml-auto mb-3 mb-xl-0">
                   <li class="nav-item dropdown active">
                      
-                      <a class="nav-link dropdown-toggle" href="index-3.html" role="button" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="{{ route('index')}}" role="button" aria-haspopup="true" aria-expanded="false">
                         Home
                      </a>
                      
@@ -200,27 +202,27 @@
                         About <i class="fas fa-angle-down"></i>
                      </a>
                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="about.html">About Us 01</a></li>
-                        <li><a class="dropdown-item" href="about-2.html">About Us 02</a></li>
-                        <li><a class="dropdown-item" href="about-3.html">About Us 03</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about')}}">About Us 01</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about-2')}}">About Us 02</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about-3')}}">About Us 03</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="courses.html">Courses</a>
+                     <a class="nav-link" href="{{ route('courses')}}">Courses</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="blog.html">Blog</a>
+                     <a class="nav-link" href="{{ route('blog')}}">Blog</a>
                   </li>
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Pages <i class="fas fa-angle-down"></i>
                      </a>
                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                        <li><a class="dropdown-item" href="{{ route('blog-details')}}">Blog Details</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="contact.html">Contact Us</a>
+                     <a class="nav-link" href="{{ route('contact')}}">Contact Us</a>
                   </li>
                </ul>
             </div>
@@ -230,14 +232,14 @@
 </header>
 
 <!-- start of page-header -->
-<section class="page-header bg-cover has-overlay" style="background-image: url(assets/images/page-header-01.jpg)">
+<section class="page-header bg-cover has-overlay" style="background-image: url('assets/assets/images/page-header-01.jpg')">
    <div class="container">
       <div class="row">
          <div class="col-12 text-center">
             <h2 class="section-title text-white font-weight-bold mb-20">About Us</h2>
             <nav aria-label="breadcrumb">
                <ol class="breadcrumb bg-transparent justify-content-center p-0 font-weight-600 mb-0">
-                  <li class="breadcrumb-item active" aria-current="page"><a href="index-3.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('index')}}">Home</a></li>
                   <li class="breadcrumb-item">About Us</li>
                </ol>
             </nav>
@@ -262,14 +264,14 @@
             </ul>
             <div class="d-sm-flex">
                <div class="media align-items-center mt-35 mr-5">
-                  <img src="assets/images/icon-winner.png" alt="">
+                  <img src="{{ asset('assets/assets/images/icon-winner.png')}}" alt="">
                   <div class="ml-3">
                      <h2 class="text-primary font-weight-bold jsCounter">374</h2>
                      <p class="text-blue">Award Win</p>
                   </div>
                </div>
                <div class="media align-items-center mt-35">
-                  <img src="assets/images/icon-tutor.png" alt="">
+                  <img src="{{ asset('assets/assets/images/icon-tutor.png')}}" alt="">
                   <div class="ml-3">
                      <h2 class="text-primary font-weight-bold jsCounter">623</h2>
                      <p class="text-blue">Experts Tutor</p>
@@ -279,7 +281,7 @@
          </div>
          <div class="col-lg-5 mt-5 mt-lg-0 text-center">
             <div class="img-line-box">
-               <img class="img-fluid" src="assets/images/online-eu.jpg" alt="">
+               <img class="img-fluid" src="{{ asset('assets/assets/images/online-eu.jpg')}}" alt="">
             </div>
          </div>
       </div>
@@ -293,7 +295,7 @@
    <div class="container">
       <div class="no-gutters d-block d-lg-flex align-items-center justify-content-end">
          <div class="col-lg-10 col-12 mb-5 mb-lg-0 text-center">
-            <img class="img-fluid" src="assets/images/admission-open.jpg" alt="">
+            <img class="img-fluid" src="{{ asset('assets/assets/images/admission-open.jpg')}}" alt="">
          </div>
          <div class="col-lg-6">
             <div class="pl-lg-5 pb-5 mb-5 mb-lg-0 pb-lg-0">
@@ -327,7 +329,7 @@
             <div class="owl-carousel instructors-carousel">
                <div class="card instructors-item border-0">
                   <div class="position-relative">
-                     <img src="assets/images/instructors/01.jpg" alt="" class="card-img-top">
+                     <img src="{{ asset('assets/assets/images/instructors/01.jpg')}}" alt="" class="card-img-top">
                      <div class="instructor-social text-center">
                         <a href="#!" class="p-3 text-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#!" class="p-3 text-link"><i class="fab fa-twitter"></i></a>
@@ -342,7 +344,7 @@
                </div>
                <div class="card instructors-item border-0">
                   <div class="position-relative">
-                     <img src="assets/images/instructors/02.jpg" alt="" class="card-img-top">
+                     <img src="{{ asset('assets/assets/images/instructors/02.jpg')}}" alt="" class="card-img-top">
                      <div class="instructor-social text-center">
                         <a href="#!" class="p-3 text-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#!" class="p-3 text-link"><i class="fab fa-twitter"></i></a>
@@ -357,7 +359,7 @@
                </div>
                <div class="card instructors-item border-0">
                   <div class="position-relative">
-                     <img src="assets/images/instructors/03.jpg" alt="" class="card-img-top">
+                     <img src="{{ asset('assets/assets/images/instructors/03.jpg')}}" alt="" class="card-img-top">
                      <div class="instructor-social text-center">
                         <a href="#!" class="p-3 text-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#!" class="p-3 text-link"><i class="fab fa-twitter"></i></a>
@@ -372,7 +374,7 @@
                </div>
                <div class="card instructors-item border-0">
                   <div class="position-relative">
-                     <img src="assets/images/instructors/02.jpg" alt="" class="card-img-top">
+                     <img src="{{ asset('assets/assets/images/instructors/02.jpg')}}" alt="" class="card-img-top">
                      <div class="instructor-social text-center">
                         <a href="#!" class="p-3 text-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#!" class="p-3 text-link"><i class="fab fa-twitter"></i></a>
@@ -394,16 +396,16 @@
 
 
 <!-- start of students says -->
-<section class="section-padding bg-cover" style="background-image: url(assets/images/pattern-bg.jpg);">
+<section class="section-padding bg-cover" style="background-image: url('assets/assets/images/pattern-bg.jpg');">
    <div class="container">
       <div class="row justify-content-center">
          <div class="col-lg-7 position-relative">
             <div class="owl-carousel student-says-carousel">
                <div class="text-center bg-white py-5 px-4 px-md-5 rounded shadow">
-                  <img class="mb-30 mx-auto" src="assets/images/quote.jpg" alt="">
+                  <img class="mb-30 mx-auto" src="{{ asset('assets/assets/images/quote.jpg')}}" alt="">
                   <p>Announcing say boy precaution unaffected difficulty alteration him. Above be would at so going heard. Engaged at village at am equally proceed. Settle nay length almost ham direct extent. Agreement for listening remainder get attention law acuteness day. Now whatever surprise resolved elegance indulged own way outlived. </p>
                   <div class="media d-block d-sm-flex text-center text-sm-left justify-content-center mt-25">
-                     <img class="mx-auto mx-sm-0" src="assets/images/user-01.jpg" alt="">
+                     <img class="mx-auto mx-sm-0" src="{{ asset('assets/assets/images/user-01.jpg')}}" alt="">
                      <div class="ml-0 ml-sm-3 mt-3 mt-sm-0">
                         <h4 class="font-weight-600 text-blue mb-1">James Benzion</h4>
                         <p>Pittsburgh, USA</p>
@@ -411,10 +413,10 @@
                   </div>
                </div>
                <div class="text-center bg-white py-5 px-4 px-md-5 rounded shadow">
-                  <img class="mb-30 mx-auto" src="assets/images/quote.jpg" alt="">
+                  <img class="mb-30 mx-auto" src="{{ asset('assets/assets/images/quote.jpg')}}" alt="">
                   <p>Announcing say boy precaution unaffected difficulty alteration him. Above be would at so going heard. Engaged at village at am equally proceed. Settle nay length almost ham direct extent. Agreement for listening remainder get attention law acuteness day. Now whatever surprise resolved elegance indulged own way outlived. </p>
                   <div class="media d-block d-sm-flex text-center text-sm-left justify-content-center mt-25">
-                     <img class="mx-auto mx-sm-0" src="assets/images/user-05.png" alt="">
+                     <img class="mx-auto mx-sm-0" src="{{ asset('assets/assets/images/user-05.png')}}" alt="">
                      <div class="ml-0 ml-sm-3 mt-3 mt-sm-0">
                         <h4 class="font-weight-600 text-blue mb-1">JAck Barker</h4>
                         <p>Pittsburgh, USA</p>
@@ -422,10 +424,10 @@
                   </div>
                </div>
                <div class="text-center bg-white py-5 px-4 px-md-5 rounded shadow">
-                  <img class="mb-30 mx-auto" src="assets/images/quote.jpg" alt="">
+                  <img class="mb-30 mx-auto" src="{{ asset('assets/assets/images/quote.jpg')}}" alt="">
                   <p>Announcing say boy precaution unaffected difficulty alteration him. Above be would at so going heard. Engaged at village at am equally proceed. Settle nay length almost ham direct extent. Agreement for listening remainder get attention law acuteness day. Now whatever surprise resolved elegance indulged own way outlived. </p>
                   <div class="media d-block d-sm-flex text-center text-sm-left justify-content-center mt-25">
-                     <img class="mx-auto mx-sm-0" src="assets/images/user-06.png" alt="">
+                     <img class="mx-auto mx-sm-0" src="{{ asset('assets/assets/images/user-06.png')}}" alt="">
                      <div class="ml-0 ml-sm-3 mt-3 mt-sm-0">
                         <h4 class="font-weight-600 text-blue mb-1">Jesmin Benzion</h4>
                         <p>Pittsburgh, USA</p>
@@ -448,17 +450,17 @@
    <span class="fas fa-chevron-up"></span>
 </a>
 
-<!-- jQuery -->
-<script src="vendors/jQuery/jquery.min.js"></script>
-<script src="vendors/bootstrap/bootstrap.min.js"></script>
-<script src="vendors/jquery-nice-select/jquery.nice-select.min.js"></script>
-<script src="vendors/OwlCarousel2/owl.carousel.min.js"></script>
-<script src="vendors/counterup/waypoints.min.js"></script>
-<script src="vendors/counterup/jquery.counterup.min.js"></script>
-<script src="vendors/magnific-popup/js/magnific-popup.min.js"></script>
+<script src="{{ asset('assets/vendors/jQuery/jquery.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/jquery-nice-select/jquery.nice-select.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/OwlCarousel2/owl.carousel.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/waypoints.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/jquery.counterup.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/magnific-popup/js/magnific-popup.min.js')}}"></script>
 
 <!-- Main Script -->
-<script src="assets/js/script.js"></script>
+<script src="{{ asset('assets/assets/js/script.js')}}"></script>
+
 
 </body>
 </html>

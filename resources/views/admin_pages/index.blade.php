@@ -13,7 +13,7 @@
 							<div class="flex-grow-1 p-30 flex-grow-1 bg-img dask-bg bg-none-md" style="background-position: right bottom; background-size: auto 100%; background-image: url(https://www.multipurposethemes.com/admin/eduadmin-template/images/svg-icon/color-svg/custom-1.svg)">
 								<div class="row">
 									<div class="col-12 col-xl-7">
-										<h2>Welcome back, <strong>John!</strong></h2>
+										<h2>Welcome back, <strong>{{$user}}</strong></h2>
 
 										<p class="text-dark my-10 font-size-16">
 											Your students complated <strong class="text-warning">80%</strong> of the tasks.
@@ -42,7 +42,7 @@
 									<div class="d-flex align-items-center mb-30 gap-items-3 justify-content-between">
 										<div class="d-flex align-items-center font-weight-500">
 											<div class="mr-15 w-50 d-table">
-												<img src="../images/avatar/avatar-1.png" class="avatar avatar-lg rounded10 bg-primary-light" alt="">
+												<img src="{{ asset('assets/images/avatar/avatar-1.png')}}" class="avatar avatar-lg rounded10 bg-primary-light" alt="">
 											</div>
 											<div>
 												<a href="#" class="text-dark hover-primary mb-5 d-block font-size-16">Amelia</a>
@@ -61,7 +61,7 @@
 									<div class="d-flex align-items-center mb-30 gap-items-3 justify-content-between">
 										<div class="d-flex align-items-center font-weight-500">
 											<div class="mr-15 w-50 d-table">
-												<img src="../images/avatar/avatar-2.png" class="avatar avatar-lg rounded10 bg-primary-light" alt="">
+												<img src="{{ asset('assets/images/avatar/avatar-2.png')}}" class="avatar avatar-lg rounded10 bg-primary-light" alt="">
 											</div>
 											<div>
 												<a href="#" class="text-dark hover-primary mb-5 d-block font-size-16">Johen</a>
@@ -80,7 +80,7 @@
 									<div class="d-flex align-items-center mb-30 gap-items-3 justify-content-between">
 										<div class="d-flex align-items-center font-weight-500">
 											<div class="mr-15 w-50 d-table">
-												<img src="../images/avatar/avatar-1.png" class="avatar avatar-lg rounded10 bg-primary-light" alt="">
+												<img src="{{ asset('assets/images/avatar/avatar-1.png')}}" class="avatar avatar-lg rounded10 bg-primary-light" alt="">
 											</div>
 											<div>
 												<a href="#" class="text-dark hover-primary mb-5 d-block font-size-16">Micheal</a>
@@ -99,7 +99,7 @@
 									<div class="d-flex align-items-center mb-30 gap-items-3 justify-content-between">
 										<div class="d-flex align-items-center font-weight-500">
 											<div class="mr-15 w-50 d-table">
-												<img src="../images/avatar/avatar-1.png" class="avatar avatar-lg rounded10 bg-primary-light" alt="">
+												<img src="{{ asset('assets/images/avatar/avatar-1.png')}}" class="avatar avatar-lg rounded10 bg-primary-light" alt="">
 											</div>
 											<div>
 												<a href="#" class="text-dark hover-primary mb-5 d-block font-size-16">Amanda</a>
@@ -118,7 +118,7 @@
 									<div class="d-flex align-items-center gap-items-3 justify-content-between">
 										<div class="d-flex align-items-center font-weight-500">
 											<div class="mr-15 w-50 d-table">
-												<img src="../images/avatar/avatar-1.png" class="avatar avatar-lg rounded10 bg-primary-light" alt="">
+												<img src="{{ asset('assets/images/avatar/avatar-1.png')}}" class="avatar avatar-lg rounded10 bg-primary-light" alt="">
 											</div>
 											<div>
 												<a href="#" class="text-dark hover-primary mb-5 d-block font-size-16">Tyler</a>
@@ -318,7 +318,7 @@
 										<div class="d-flex align-items-center justify-content-between mt-10">
 											<div class="d-flex">
 												<a href="#" class="mr-15 bg-lightest h-50 w-50 l-h-50 rounded-circle text-center overflow-hidden">
-													<img src="../images/avatar/avatar-1.png" class="h-50 align-self-end" alt="">
+													<img src="{{ asset('assets/images/avatar/avatar-1.png')}}" class="h-50 align-self-end" alt="">
 												</a>
 												<a href="#" class="mr-15 bg-lightest h-50 w-50 l-h-50 rounded-circle text-center overflow-hidden">
 													<img src="../images/avatar/avatar-3.png" class="h-50 align-self-end" alt="">
@@ -356,7 +356,7 @@
 										<div class="d-flex align-items-center justify-content-between mt-10">
 											<div class="d-flex">
 												<a href="#" class="mr-15 bg-lightest h-50 w-50 l-h-50 rounded-circle text-center overflow-hidden">
-													<img src="../images/avatar/avatar-2.png" class="h-50 align-self-end" alt="">
+													<img src="{{ asset('assets/images/avatar/avatar-2.png')}}" class="h-50 align-self-end" alt="">
 												</a>
 												<a href="#" class="mr-15 bg-lightest h-50 w-50 l-h-50 rounded-circle text-center overflow-hidden">
 													<img src="../images/avatar/avatar-5.png" class="h-50 align-self-end" alt="">

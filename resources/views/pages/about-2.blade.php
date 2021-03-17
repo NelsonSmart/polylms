@@ -4,23 +4,24 @@
 <head>
   <meta charset="utf-8">
   <title>PolyNekTech - Tutor Online Courses</title>
+    
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <!-- ** Plugins Needed for the Project ** -->
-  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="vendors/jquery-nice-select/nice-select.css">
-  <link rel="stylesheet" href="vendors/OwlCarousel2/owl.carousel.min.css">
-  <link rel="stylesheet" href="vendors/magnific-popup/css/magnific-popup.css">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/jquery-nice-select/nice-select.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/OwlCarousel2/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/magnific-popup/css/magnific-popup.css')}}">
 
   <!-- Main Stylesheet -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{{ asset('assets/assets/css/style.css')}}" rel="stylesheet">
   
   <!--Favicon-->
-  <link rel="shortcut icon" href="assets/images/free-class.png" type="image/png">
+  <link rel="shortcut icon" href="{{ asset('assets/assets/images/free-class.png')}}" type="image/png">
 
 </head>
 
@@ -98,10 +99,10 @@
             <div class="modal-body p-3 p-sm-4">
                <ul class="nav nav-pills nav-justified tab-nav" id="myTab" role="tablist">
                   <li class="nav-item" role="presentation">
-                     <a class="nav-link active" id="guardian-tab" data-toggle="tab" href="#guardian" role="tab" aria-controls="guardian" aria-selected="true"><img src="assets/images/guardian.png" class="mr-2" alt="" style="height:45px"> Login as<br>Student</a>
+                     <a class="nav-link active" id="guardian-tab" data-toggle="tab" href="#guardian" role="tab" aria-controls="guardian" aria-selected="true"><img src="{{asset('assets/assets/images/guardian.png')}}" class="mr-2" alt="" style="height:45px"> Login as<br>Student</a>
                   </li>
                   <li class="nav-item" role="presentation">
-                     <a class="nav-link" id="tutor-tab" data-toggle="tab" href="#tutor" role="tab" aria-controls="tutor" aria-selected="false"><img src="assets/images/tutor.png" class="mr-2" alt="" style="height:45px"> Login as<br>Tutor</a>
+                     <a class="nav-link" id="tutor-tab" data-toggle="tab" href="#tutor" role="tab" aria-controls="tutor" aria-selected="false"><img src="{{asset('assets/assets/images/tutor.png')}}" class="mr-2" alt="" style="height:45px"> Login as<br>Tutor</a>
                   </li>
                </ul>
                <div class="tab-content" id="myTabContent">
@@ -146,7 +147,7 @@
    <div class="container-lg">
       <nav class="navbar navbar-expand-xl navbar-dark px-0">
          <a class="navbar-brand" href="index-2.html">
-            <img id="logo-q"  src="assets/images/logo.png" alt="" style="height:49px">
+            <img id="logo-q"  src="{{ asset('assets/assets/images/logo.png')}}" alt="" style="height:49px">
          </a>
 
          <div class="d-none d-md-flex align-items-center ml-auto">
@@ -189,7 +190,7 @@
 
                <ul class="navbar-nav ml-auto mb-3 mb-xl-0">
                   <li class="nav-item dropdown active">
-                     <a class="nav-link dropdown-toggle" href="index-3.html" role="button" aria-haspopup="true" aria-expanded="false">
+                     <a class="nav-link dropdown-toggle" href="{{ route('index')}}" role="button" aria-haspopup="true" aria-expanded="false">
                         Home
                      </a>
                      
@@ -199,27 +200,27 @@
                         About <i class="fas fa-angle-down"></i>
                      </a>
                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="about.html">About Us 01</a></li>
-                        <li><a class="dropdown-item" href="about-2.html">About Us 02</a></li>
-                        <li><a class="dropdown-item" href="about-3.html">About Us 03</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about')}}">About Us 01</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about-2')}}">About Us 02</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about-3')}}">About Us 03</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="courses.html">Courses</a>
+                     <a class="nav-link" href="{{ route('courses')}}">Courses</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="blog.html">Blog</a>
+                     <a class="nav-link" href="{{ route('blog')}}">Blog</a>
                   </li>
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Pages <i class="fas fa-angle-down"></i>
                      </a>
                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                        <li><a class="dropdown-item" href="{{ route('blog-details')}}">Blog Details</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="contact.html">Contact Us</a>
+                     <a class="nav-link" href="{{ route('contact')}}">Contact Us</a>
                   </li>
                </ul>
             </div>
@@ -252,7 +253,7 @@
    <div class="container">
       <div class="row align-items-center">
          <div class="col-lg-6 text-center">
-            <img class="img-fluid rounded pr-lg-3" src="assets/images/tms.png" alt="">
+            <img class="img-fluid rounded pr-lg-3" src="{{asset('assets/assets/images/tms.png')}}" alt="">
          </div>
          <div class="col-lg-6 mt-5 mt-lg-0">
             <h2 class="section-title mb-30">About Our <br>Tutor Management <br>System Online</h2>
@@ -318,7 +319,7 @@
             <a href="#!" class="btn btn-outline-primary">Get start now</a>
          </div>
          <div class="col-lg-6">
-            <img class="img-fluid" src="assets/images/certificate.png" alt="">
+            <img class="img-fluid" src="{{asset('assets/assets/images/certificate.png')}}" alt="">
          </div>
       </div>
    </div>
@@ -327,7 +328,7 @@
 
 
 <!-- start of tutor carousel -->
-<section class="section-padding bg-light bg-cover" style="background-image:url(assets/images/tutor-say-bg.jpg)">
+<section class="section-padding bg-light bg-cover" style="background-image:url('assets/assets/images/tutor-say-bg.jpg')">
    <div class="container">
       <div class="row justify-content-end">
          <div class="col-lg-10">
@@ -393,7 +394,7 @@
          <div class="col-md-4 col-sm-6">
             <div class="card text-center border-0 mt-30">
                <div class="hover-grayscale">
-                  <img src="assets/images/instructors/01.jpg" alt="" class="card-img-top">
+                  <img src="{{asset('assets/assets/images/instructors/01.jpg')}}" alt="" class="card-img-top">
                </div>
                <div class="card-body px-0 pb-0">
                   <h4 class="font-weight-600 text-blue mb-1">Jack Benzion</h4>
@@ -410,7 +411,7 @@
          <div class="col-md-4 col-sm-6">
             <div class="card text-center border-0 mt-30">
                <div class="hover-grayscale">
-                  <img src="assets/images/instructors/02.jpg" alt="" class="card-img-top">
+                  <img src="{{asset('assets/assets/images/instructors/02.jpg')}}" alt="" class="card-img-top">
                </div>
                <div class="card-body px-0 pb-0">
                   <h4 class="font-weight-600 text-blue mb-1">Jesmin Walkaer</h4>
@@ -427,7 +428,7 @@
          <div class="col-md-4 col-sm-6">
             <div class="card text-center border-0 mt-30">
                <div class="hover-grayscale">
-                  <img src="assets/images/instructors/03.jpg" alt="" class="card-img-top">
+                  <img src="{{asset('assets/assets/images/instructors/03.jpg')}}" alt="" class="card-img-top">
                </div>
                <div class="card-body px-0 pb-0">
                   <h4 class="font-weight-600 text-blue mb-1">James Benzion</h4>
@@ -515,16 +516,16 @@
 </a>
 
 <!-- jQuery -->
-<script src="vendors/jQuery/jquery.min.js"></script>
-<script src="vendors/bootstrap/bootstrap.min.js"></script>
-<script src="vendors/jquery-nice-select/jquery.nice-select.min.js"></script>
-<script src="vendors/OwlCarousel2/owl.carousel.min.js"></script>
-<script src="vendors/counterup/waypoints.min.js"></script>
-<script src="vendors/counterup/jquery.counterup.min.js"></script>
-<script src="vendors/magnific-popup/js/magnific-popup.min.js"></script>
+<script src="{{ asset('assets/vendors/jQuery/jquery.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/jquery-nice-select/jquery.nice-select.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/OwlCarousel2/owl.carousel.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/waypoints.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/jquery.counterup.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/magnific-popup/js/magnific-popup.min.js')}}"></script>
 
 <!-- Main Script -->
-<script src="assets/js/script.js"></script>
+<script src="{{ asset('assets/assets/js/script.js')}}"></script>
 
 </body>
 </html>

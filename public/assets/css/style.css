@@ -17898,7 +17898,8 @@ time {
     opacity: 0.5; }
   100% {
     -webkit-transform: scale(1);
-    opacity: 0.0; } }
+    opacity: 0.0; } 
+  }
 .dash-tx {
   position: absolute;
   width: 40%;

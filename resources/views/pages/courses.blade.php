@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+    <meta http-equiv="refresh" content="30">
   <title>EduSkills - Tutor Onlne Courses </title>
 
   <!-- mobile responsive meta -->
@@ -10,18 +11,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <!-- ** Plugins Needed for the Project ** -->
-  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="vendors/jquery-nice-select/nice-select.css">
-  <link rel="stylesheet" href="vendors/OwlCarousel2/owl.carousel.min.css">
-  <link rel="stylesheet" href="vendors/magnific-popup/css/magnific-popup.css">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/jquery-nice-select/nice-select.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/OwlCarousel2/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/vendors/magnific-popup/css/magnific-popup.css')}}">
 
   <!-- Main Stylesheet -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{{ asset('assets/assets/css/style.css')}}" rel="stylesheet">
   
   <!--Favicon-->
-  <link rel="shortcut icon" href="assets/images/free-class.png" type="image/png">
-
+  <link rel="shortcut icon" href="{{ asset('assets/assets/images/free-class.png')}}" type="image/png">
 </head>
 
 <body id="top">
@@ -146,7 +146,7 @@
    <div class="container-lg">
       <nav class="navbar navbar-expand-xl navbar-dark px-0">
          <a class="navbar-brand" href="index-2.html">
-            <img src="assets/images/logo.png" alt="" style="height:49px">
+            <img src="{{asset asset('assets/images/logo.png')}}" alt="" style="height:49px">
          </a>
 
          <div class="d-none d-md-flex align-items-center ml-auto">
@@ -188,39 +188,40 @@
                    </div>
                </form>
 
-               <ul class="navbar-nav ml-auto mb-3 mb-xl-0">
+               <ul class="navbar-nav mt-4 mt-xl-0 mx-auto ml-xl-0">
                   <li class="nav-item dropdown active">
-                     <a class="nav-link dropdown-toggle" href="index-3.html" role="button"  aria-haspopup="true" aria-expanded="false">
-                        Home 
+                    <a class="nav-link dropdown-toggle" href"{{ route('index')}}" role="button" aria-haspopup="true" aria-expanded="false">
+                        Home
                      </a>
-                    
+
                   </li>
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         About <i class="fas fa-angle-down"></i>
                      </a>
                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="about.html">About Us 01</a></li>
-                        <li><a class="dropdown-item" href="about-2.html">About Us 02</a></li>
-                        <li><a class="dropdown-item" href="about-3.html">About Us 03</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about')}}">About Us 01</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about-2')}}">About Us 02</a></li>
+                        <li><a class="dropdown-item" href="{{ route('about-3')}}">About Us 03</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="courses.html">Courses</a>
+                     <a class="nav-link" href="{{ route('courses')}}">Courses</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="blog.html">Blog</a>
+                     <a class="nav-link" href="{{ route('blog')}}">Blog</a>
                   </li>
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Pages <i class="fas fa-angle-down"></i>
                      </a>
                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+
+                        <li><a class="dropdown-item" href="{{ route('blog-details')}}">Blog Details</a></li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="contact.html">Contact Us</a>
+                     <a class="nav-link" href="{{ route('contact')}}">Contact Us</a>
                   </li>
                </ul>
             </div>
@@ -438,7 +439,7 @@
          </div>
          <div class="col-lg-4 col-md-5 col-sm-6">
             <div class="card course-card shadow mt-40">
-               <img class="card-img-top" src="assets/images/courses/10.jpg" alt="">
+               <img class="card-img-top" src="{{ asset('assets/assets/images/courses/10.jpg')}}" alt="">
                <div class="card-body p-30">
                   <h5 class="font-weight-600"><a href="#!" class="text-blue">MLP Practitioner Certificate Course (Beginner To Advanced)</a></h5>
                   <p class="mt-2">She exposed painted fifteen are noisier mistake led waiting surprise.</p>
@@ -546,17 +547,16 @@
    <span class="fas fa-chevron-up"></span>
 </a>
 
-<!-- jQuery -->
-<script src="vendors/jQuery/jquery.min.js"></script>
-<script src="vendors/bootstrap/bootstrap.min.js"></script>
-<script src="vendors/jquery-nice-select/jquery.nice-select.min.js"></script>
-<script src="vendors/OwlCarousel2/owl.carousel.min.js"></script>
-<script src="vendors/counterup/waypoints.min.js"></script>
-<script src="vendors/counterup/jquery.counterup.min.js"></script>
-<script src="vendors/magnific-popup/js/magnific-popup.min.js"></script>
+<script src="{{ asset('assets/vendors/jQuery/jquery.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/jquery-nice-select/jquery.nice-select.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/OwlCarousel2/owl.carousel.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/waypoints.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/jquery.counterup.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/magnific-popup/js/magnific-popup.min.js')}}"></script>
 
 <!-- Main Script -->
-<script src="assets/js/script.js"></script>
+<script src="{{ asset('assets/assets/js/script.js')}}"></script>
 
 </body>
 </html>

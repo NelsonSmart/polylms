@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth_admin\Home;
-use App\Http\Controllers\Auth_admin\Auth_adminenticatedSessionController;
+use App\Http\Controllers\Auth_admin\AuthenticatedSessionController;
 use App\Http\Controllers\Auth_admin\ConfirmablePasswordController;
 use App\Http\Controllers\Auth_admin\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth_admin\EmailVerificationPromptController;
@@ -9,11 +9,14 @@ use App\Http\Controllers\Auth_admin\NewPasswordController;
 use App\Http\Controllers\Auth_admin\PasswordResetLinkController;
 use App\Http\Controllers\Auth_admin\RegisteredUserController;
 use App\Http\Controllers\Auth_admin\VerifyEmailController;
+use App\Models\User;
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
-Route::get('/admin', function () {
-    return view('admin_pages.index');
+Route::get('/admin_', function () {
+   $this->user =  User::all();
+    return view('admin_pages.index', ['user'=> $this->user[0]['first_name']]);
 }) -> name('admin_index');
 
 Route::get('/admin/index', function () {
@@ -488,15 +491,18 @@ Route::get('/admin/widgets_weather', function (){
     return view('admin_pages.widgets_weather');
 })->name('widgets_weather');
 
-
+Route::get('admin',[AuthenticatedSessionController::class, 'create']);
+Route::post('admin',[AuthenticatedSessionController::class, 'store']);
 
 
 
 
 // template route (remove later.....)
-Route::get('/admin/temp', function () {
-    return view('admin_master') ;
-});
+/**
+ * Route::get('/admin/temp', function () {
+ *   return view('admin_master') ;
+ *});
+ */
 
 Route::get('/admin/register', [RegisteredUserController::class, 'create'])
                 ->middleware('guest')

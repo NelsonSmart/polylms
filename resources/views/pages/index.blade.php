@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
     
+    
   <title>PolyNekTech - Tutor Online Courses</title>
 
   <!-- mobile responsive meta -->
@@ -42,35 +43,39 @@
                 </button>
             </div>
             <div class="modal-body p-3 p-sm-4">
-                <form method="POST" class="row">
+                <form method="POST" class="row" action= "{{ url('pro')}}">
+                 @csrf
+                     <input type = "number" name = "role" value = "0" hidden>
                     <div class="form-group mb-20 col-12">
                         <label class="text-secondary h6 mb-2" for="fname">Your Name*</label>
-                        <input class="form-control shadow-none rounded-sm" type="text" placeholder="Jack" id="fname" required>
+                        <input class="form-control shadow-none rounded-sm" type="text" placeholder="First Name" id="fname" name="fname" required>
+                        <br>
+                        <input class="form-control shadow-none rounded-sm" type="text" placeholder="Last Name" id="fname" name="lname" required>
                     </div>
                     <div class="form-group mb-20 col-12">
                         <label class="text-secondary h6 mb-2" for="pnumber">Phone Number*</label>
-                        <input class="form-control shadow-none rounded-sm" type="text" placeholder="Phone Number" id="pnumber" required>
+                        <input class="form-control shadow-none rounded-sm" type="text" placeholder="Phone Number" id="pnumber" name="pnumber" required>
                     </div>
                     <div class="form-group mb-20 col-12">
                         <label class="text-secondary h6 mb-2" for="email2">Email Address*</label>
-                        <input class="form-control shadow-none rounded-sm" type="email" placeholder="jack@email.com" id="email2" required>
+                        <input class="form-control shadow-none rounded-sm" type="email" placeholder="jack@email.com" id="email2" name="email" required>
                     </div>
                     <div class="form-group mb-20 col-12">
                         <label class="text-secondary h6 mb-2 d-block">Gender*</label>
                         <div class="d-flex custom-radio-group rounded-sm">
                            <div class="custom-control custom-radio">
-                              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value = "m">
                               <label class="custom-control-label" for="customRadio1">Male</label>
                            </div>
                            <div class="custom-control custom-radio">
-                              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value = "f">
                               <label class="custom-control-label" for="customRadio2">Female</label>
                            </div>
                         </div>
                     </div>
                     <div class="form-group mb-20 col-12">
                         <label class="text-secondary h6 mb-2" for="password">Password*</label>
-                        <input class="form-control shadow-none rounded-sm" type="password" id="password" required>
+                        <input class="form-control shadow-none rounded-sm" type="password" id="password" name="password" required>
                     </div>
                     <div class="form-group mb-20 col-12">
                         <label class="text-secondary h6 mb-2" for="repassword">Retype Password*</label>
@@ -107,14 +112,15 @@
                </ul>
                <div class="tab-content" id="myTabContent">
                   <div class="tab-pane fade show active" id="guardian" role="tabpanel" aria-labelledby="guardian-tab">
-                     <form method="POST" class="row">
+                     <form method="POST" class="row" action =" {{ url('user')}}">
+                          @csrf
                          <div class="form-group mb-20 col-12">
                              <label class="text-secondary h6 font-weight-600 mb-2" for="email">Email Address*</label>
-                             <input class="form-control shadow-none rounded-sm" type="email" id="email" required>
+                             <input class="form-control shadow-none rounded-sm" type="email" id="email" name = "user" >
                          </div>
                          <div class="form-group mb-20 col-12">
                              <label class="text-secondary h6 font-weight-600 mb-2" for="passwordSignIn">Password*</label>
-                             <input class="form-control shadow-none rounded-sm" type="password" id="passwordSignIn" required>
+                             <input class="form-control shadow-none rounded-sm" type="password" id="passwordSignIn" name = "pwd" >
                          </div>
                          <div class="form-group col-12">
                              <button class="btn btn-primary w-100 rounded-sm" type="submit">Sign In</button>
@@ -211,12 +217,29 @@
                   <li class="nav-item">
                      <a class="nav-link" href="{{ route('contact')}}">Contact Us</a>
                   </li>
+
+
+
+                  <!-- User Account-->
+                  
                </ul>
+               @if(session()->has('user'))
+                 <!--session()->pull('user')-->
+               <div class ="ml-auto mt-3 mt-xl-0 mb-3 mb-xl-0 text-center text-xl-right">
+               <a class="btn btn-sm btn-link text-dark px-3" href="#"><i class="ti-user text-muted mr-2"></i> Profile</a>
+               <a class="btn btn-sm btn-link text-dark px-3" href="{{url('logout')}}"><i class="ti-lock text-muted mr-2"></i> Logout</a>
+               </div>
+               @else
 
                <div class="ml-auto mt-3 mt-xl-0 mb-3 mb-xl-0 text-center text-xl-right">
-                  <a href="#!" class="btn btn-sm btn-link text-dark px-3" data-toggle="modal" data-target="#signin-modal">Signin</a>
-                  <a href="#!" class="btn btn-sm btn-link text-dark px-3" data-toggle="modal" data-target="#signup-modal">Signup</a>
+                  <a href="#!" class="btn btn-sm btn-link text-dark px-3" data-toggle="modal" data-target="#signin-modal"><i class="ti-key text-muted mr-2"></i>Signin</a>
+                  <a href="#!" class="btn btn-sm btn-link text-dark px-3" data-toggle="modal" data-target="#signup-modal"><i class="ti-write text-muted mr-2"></i>Signup</a>
                </div>
+
+
+               @endif
+
+               
             </div>
          </nav>
       </div>
@@ -232,8 +255,8 @@
                 <h2 class="text-lg mb-20">Welcome </h2>
                 <p class="h4">
                     <br>
-To PolyNekTech Community where IT
-online learning is possible
+               To PolyNekTech Community where IT
+               online learning is possible
                     <br>
                     <q>Education now more easy then before</q>
     </p>

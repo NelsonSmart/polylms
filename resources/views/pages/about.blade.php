@@ -10,17 +10,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <!-- ** Plugins Needed for the Project ** -->
-  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="vendors/jquery-nice-select/nice-select.css">
-  <link rel="stylesheet" href="vendors/OwlCarousel2/owl.carousel.min.css">
-  <link rel="stylesheet" href="vendors/magnific-popup/css/magnific-popup.css">
+  <link rel="stylesheet" href="{{asset('assets/
+  vendors/bootstrap/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/vendors/fontawesome/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/vendors/jquery-nice-select/nice-select.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/vendors/OwlCarousel2/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/vendors/magnific-popup/css/magnific-popup.css')}}">
 
   <!-- Main Stylesheet -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{{asset('assets/assets/css/style.css')}}" rel="stylesheet">
   
   <!--Favicon-->
-  <link rel="shortcut icon" href="assets/images/free-class.png" type="image/png">
+  <link rel="shortcut icon" href="{{asset('assets/assets/images/free-class.png')}}" type="image/png">
 
 </head>
 
@@ -98,10 +99,10 @@
             <div class="modal-body p-3 p-sm-4">
                <ul class="nav nav-pills nav-justified tab-nav" id="myTab" role="tablist">
                   <li class="nav-item" role="presentation">
-                     <a class="nav-link active" id="guardian-tab" data-toggle="tab" href="#guardian" role="tab" aria-controls="guardian" aria-selected="true"><img src="assets/images/guardian.png" class="mr-2" alt="" style="height:45px"> Login as<br>Student</a>
+                     <a class="nav-link active" id="guardian-tab" data-toggle="tab" href="#guardian" role="tab" aria-controls="guardian" aria-selected="true"><img src="{{asset('assets/assets/images/guardian.png')}}" class="mr-2" alt="" style="height:45px"> Login as<br>Student</a>
                   </li>
                   <li class="nav-item" role="presentation">
-                     <a class="nav-link" id="tutor-tab" data-toggle="tab" href="#tutor" role="tab" aria-controls="tutor" aria-selected="false"><img src="assets/images/tutor.png" class="mr-2" alt="" style="height:45px"> Login as<br>Tutor</a>
+                     <a class="nav-link" id="tutor-tab" data-toggle="tab" href="#tutor" role="tab" aria-controls="tutor" aria-selected="false"><img src="{{asset('assets/assets/images/tutor.png')}}" class="mr-2" alt="" style="height:45px"> Login as<br>Tutor</a>
                   </li>
                </ul>
                <div class="tab-content" id="myTabContent">
@@ -146,7 +147,7 @@
    <div class="container-lg">
       <nav class="navbar navbar-expand-xl navbar-dark px-0">
          <a class="navbar-brand" href="index.html">
-            <img id="logp"  src="assets/images/logo-2.png" alt="" style="height:49px">
+            <img id="logp"  src="{{asset('assets/assets/images/logo-2.png')}}" alt="" style="height:49px">
          </a>
 
          <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarNavAlt" aria-controls="navbarNavAlt" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,7 +157,7 @@
          <div class="collapse navbar-collapse" id="navbarNavAlt">
             <ul class="navbar-nav mt-4 mt-xl-0 ml-auto">
                <li class="nav-item dropdown active">
-                  <a class="nav-link dropdown-toggle" href="index-3.html" role="button" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="{{ route('index')}}" role="button" aria-haspopup="true" aria-expanded="false">
                      Home 
                   </a>
                   
@@ -166,16 +167,16 @@
                      About <i class="fas fa-angle-down"></i>
                   </a>
                   <ul class="dropdown-menu">
-                     <li><a class="dropdown-item" href="about.html">About Us 01</a></li>
-                     <li><a class="dropdown-item" href="about-2.html">About Us 02</a></li>
-                     <li><a class="dropdown-item" href="about-3.html">About Us 03</a></li>
+                     <li><a class="dropdown-item" href="{{ route('about')}}">About Us 01</a></li>
+                     <li><a class="dropdown-item" href="{{ route('about-2')}}">About Us 02</a></li>
+                     <li><a class="dropdown-item" href="{{ route('about-3')}}">About Us 03</a></li>
                   </ul>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="courses.html">Courses</a>
+                  <a class="nav-link" href="{{ route('courses')}}">Courses</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="blog.html">Blog</a>
+                  <a class="nav-link" href="{{ route('blog')}}">Blog</a>
                </li>
                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -183,11 +184,11 @@
                   </a>
                   <ul class="dropdown-menu">
 
-                     <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                     <li><a class="dropdown-item" href="{{ route('blog-details')}}">Blog Details</a></li>
                   </ul>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
+                  <a class="nav-link" href="{{ route('contact')}}">Contact Us</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="#!" data-toggle="modal" data-target="#signin-modal">Signin</a>
@@ -203,14 +204,14 @@
 </header>
 
 <!-- start of page-header -->
-<section class="page-header bg-cover has-overlay" style="background-image: url(assets/images/page-header-03.jpg)">
+<section class="page-header bg-cover has-overlay" style="background-image: url('assets/assets/images/page-header-03.jpg')">
    <div class="container">
       <div class="row">
          <div class="col-12 text-center">
             <h2 class="section-title text-white font-weight-bold mb-20">About Us</h2>
             <nav aria-label="breadcrumb">
                <ol class="breadcrumb bg-transparent justify-content-center p-0 font-weight-600 mb-0">
-                  <li class="breadcrumb-item active" aria-current="page"><a href="index-3.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('index')}}">Home</a></li>
                   <li class="breadcrumb-item">About Us</li>
                </ol>
             </nav>
@@ -226,7 +227,7 @@
    <div class="container">
       <div class="row align-items-center">
          <div class="col-lg-7 text-center">
-            <img class="img-fluid rounded" src="assets/images/about-img.jpg" alt="">
+            <img class="img-fluid rounded" src="{{ asset('assets/assets/images/about-img.jpg')}}" alt="">{{ 
          </div>
          <div class="col-lg-5 mt-5 mt-lg-0">
             <h2 class="section-title mb-30">Who <span class="has-line">We Are</span></h2>
@@ -246,8 +247,8 @@
          <div class="col-lg-9">
             <div class="text-center">
                <a href="https://www.youtube.com/watch?v=yD7b6R0-LQw" class="d-block has-overlay has-video-popup tansform-none">
-                  <img class="img-fluid rounded" src="assets/images/video-thumb-3.jpg" alt="">
-                  <img class="play-btn" src="assets/images/video-btn.png" alt="">
+                  <img class="img-fluid rounded" src="{{asset('assets/assets/images/video-thumb-3.jpg')}}" alt="">
+                  <img class="play-btn" src="{{asset('assets/assets/images/video-btn.png')}}" alt="">
                </a>
                <h2 class="section-title mt-50 mb-25">What  Some Awesome Student Says <span class="has-line">About Us</span></h2>
                <p class="mb-40">Weddings and any opinions suitable smallest nay. My he houses or months settle remove <br> ladies appear. Engrossed suffering supposing he recommend.</p>
@@ -270,8 +271,8 @@
             <p>Uneasy barton seeing remark happen hi has. Am possible offering contempt mr distance stronger an. Attachment excellence announcing or reasonable am on if indulgence. Exeter talked in agreed spirit no he unable do. Betrayed shutters in vicinity it unpacked in.</p>
          </div>
          <div class="col-lg-7 mt-5 mt-lg-0 text-center">
-            <img width="49%" src="assets/images/our-vision-01.jpg" alt="">
-            <img width="49%" src="assets/images/our-vision-02.jpg" alt="">
+            <img width="49%" src="{{asset('assets/assets/images/our-vision-01.jpg')}}" alt="">
+            <img width="49%" src="{{asset('assets/assets/images/our-vision-02.jpg')}}" alt="">
          </div>
       </div>
    </div>
@@ -290,7 +291,7 @@
       <div class="row align-items-center">
          <div class="col-lg-12">
             <a href="https://www.google.com/maps/place/Federal+Polytechnic,+Nekede,+Owerri/@5.4794628,7.0271717,13z/data=!4m5!3m4!1s0x10425953526b4bcf:0x46c2c2b2e67f46df!8m2!3d5.4794628!4d7.0293604" class="map-image" target="_blank">
-               <img src="assets/images/map-img.jpg" alt="">
+               <img src="{{asset('assets/assets/images/map-img.jpg')}}" alt="">
                <span class="map-text h4"><i class="fas fa-external-link-alt mr-2"></i> View us on Map</span>
             </a>
          </div>
@@ -330,7 +331,7 @@
       <div class="container">
          <div class="row align-items-center">
             <div class="col-lg-9 text-center text-lg-left mb-3 mb-lg-0">
-               &copy; Copyright All Review <img src="assets/images/logo.png" height="30">
+               &copy; Copyright All Review <img src="{{asset('assets/assets/images/logo.png')}}" height="30">
             </div>
             <div class="col-lg-3 text-center text-lg-right">
                <ul class="list-unstyled list-inline font-weight-500">
@@ -346,17 +347,17 @@
    <span class="fas fa-chevron-up"></span>
 </a>
 
-<!-- jQuery -->
-<script src="vendors/jQuery/jquery.min.js"></script>
-<script src="vendors/bootstrap/bootstrap.min.js"></script>
-<script src="vendors/jquery-nice-select/jquery.nice-select.min.js"></script>
-<script src="vendors/OwlCarousel2/owl.carousel.min.js"></script>
-<script src="vendors/counterup/waypoints.min.js"></script>
-<script src="vendors/counterup/jquery.counterup.min.js"></script>
-<script src="vendors/magnific-popup/js/magnific-popup.min.js"></script>
+<script src="{{ asset('assets/vendors/jQuery/jquery.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/jquery-nice-select/jquery.nice-select.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/OwlCarousel2/owl.carousel.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/waypoints.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/counterup/jquery.counterup.min.js')}}"></script>
+<script src="{{ asset('assets/vendors/magnific-popup/js/magnific-popup.min.js')}}"></script>
 
 <!-- Main Script -->
-<script src="assets/js/script.js"></script>
+<script src="{{ asset('assets/assets/js/script.js')}}"></script>
+
 
 </body>
 </html>

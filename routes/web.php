@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,11 @@ Route::get('/', function () {
     return view('pages.index');
 
 })->name('index');
+
+Route::post('pro', [UserController::class, 'sae']);
+
+Route::post('user', [UserController::class, 'store']);
+Route::get('logout',[UserController::class, 'destory'] );
 
 Route::get('/about', function () {
     return view('pages.about');
