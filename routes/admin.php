@@ -18,7 +18,6 @@ Route::get('/admin_', function () {
    $this->user =  User::all();
     return view('admin_pages.index', ['user'=> $this->user[0]['first_name']]);
 }) -> name('admin_index');
-
 Route::get('/admin/index', function () {
     return view('admin_pages.index2');
 })-> name('admin_index2'); 

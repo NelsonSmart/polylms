@@ -37,6 +37,8 @@ class UserController extends Controller
         $data->gender = $req->customRadio;
         $data->save();
 
+        return redirect('/');
+
 
     }
 }

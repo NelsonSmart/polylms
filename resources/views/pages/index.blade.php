@@ -33,219 +33,14 @@
   <!-- end of preloader -->
 
   <!-- signup-modal -->
-  <div class="modal fade rounded" id="signup-modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title text-secondary font-weight-600">Register now</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body p-3 p-sm-4">
-                <form method="POST" class="row" action= "{{ url('pro')}}">
-                 @csrf
-                     <input type = "number" name = "role" value = "0" hidden>
-                    <div class="form-group mb-20 col-12">
-                        <label class="text-secondary h6 mb-2" for="fname">Your Name*</label>
-                        <input class="form-control shadow-none rounded-sm" type="text" placeholder="First Name" id="fname" name="fname" required>
-                        <br>
-                        <input class="form-control shadow-none rounded-sm" type="text" placeholder="Last Name" id="fname" name="lname" required>
-                    </div>
-                    <div class="form-group mb-20 col-12">
-                        <label class="text-secondary h6 mb-2" for="pnumber">Phone Number*</label>
-                        <input class="form-control shadow-none rounded-sm" type="text" placeholder="Phone Number" id="pnumber" name="pnumber" required>
-                    </div>
-                    <div class="form-group mb-20 col-12">
-                        <label class="text-secondary h6 mb-2" for="email2">Email Address*</label>
-                        <input class="form-control shadow-none rounded-sm" type="email" placeholder="jack@email.com" id="email2" name="email" required>
-                    </div>
-                    <div class="form-group mb-20 col-12">
-                        <label class="text-secondary h6 mb-2 d-block">Gender*</label>
-                        <div class="d-flex custom-radio-group rounded-sm">
-                           <div class="custom-control custom-radio">
-                              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value = "m">
-                              <label class="custom-control-label" for="customRadio1">Male</label>
-                           </div>
-                           <div class="custom-control custom-radio">
-                              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value = "f">
-                              <label class="custom-control-label" for="customRadio2">Female</label>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="form-group mb-20 col-12">
-                        <label class="text-secondary h6 mb-2" for="password">Password*</label>
-                        <input class="form-control shadow-none rounded-sm" type="password" id="password" name="password" required>
-                    </div>
-                    <div class="form-group mb-20 col-12">
-                        <label class="text-secondary h6 mb-2" for="repassword">Retype Password*</label>
-                        <input class="form-control shadow-none rounded-sm" type="password" id="repassword" required>
-                    </div>
-                    <div class="form-group col-12">
-                        <button class="btn btn-primary w-100 rounded-sm" type="submit">Sign Up</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-  </div>
+   @include('pages.signupM')
   <!-- signup-modal -->
 
   <!-- signin-modal -->
-  <div class="modal fade rounded" id="signin-modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered mx-auto" style="max-width:400px">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title text-secondary font-weight-600">Welcome back</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body p-3 p-sm-4">
-               <ul class="nav nav-pills nav-justified tab-nav" id="myTab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                     <a class="nav-link active" id="guardian-tab" data-toggle="tab" href="#guardian" role="tab" aria-controls="guardian" aria-selected="true"><img src="assets/images/guardian.png" class="mr-2" alt="" style="height:45px"> Login as<br>Student</a>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                     <a class="nav-link" id="tutor-tab" data-toggle="tab" href="#tutor" role="tab" aria-controls="tutor" aria-selected="false"><img src="assets/images/tutor.png" class="mr-2" alt="" style="height:45px"> Login as<br>Tutor</a>
-                  </li>
-               </ul>
-               <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="guardian" role="tabpanel" aria-labelledby="guardian-tab">
-                     <form method="POST" class="row" action =" {{ url('user')}}">
-                          @csrf
-                         <div class="form-group mb-20 col-12">
-                             <label class="text-secondary h6 font-weight-600 mb-2" for="email">Email Address*</label>
-                             <input class="form-control shadow-none rounded-sm" type="email" id="email" name = "user" >
-                         </div>
-                         <div class="form-group mb-20 col-12">
-                             <label class="text-secondary h6 font-weight-600 mb-2" for="passwordSignIn">Password*</label>
-                             <input class="form-control shadow-none rounded-sm" type="password" id="passwordSignIn" name = "pwd" >
-                         </div>
-                         <div class="form-group col-12">
-                             <button class="btn btn-primary w-100 rounded-sm" type="submit">Sign In</button>
-                         </div>
-                     </form>
-                  </div>
-                  <div class="tab-pane fade" id="tutor" role="tabpanel" aria-labelledby="tutor-tab">
-                     <form method="POST" class="row">
-                         <div class="form-group mb-20 col-12">
-                             <label class="text-secondary h6 font-weight-600 mb-2" for="email">Email Address*</label>
-                             <input class="form-control shadow-none rounded-sm" type="email" id="email" required>
-                         </div>
-                         <div class="form-group mb-20 col-12">
-                             <label class="text-secondary h6 font-weight-600 mb-2" for="passwordSignIn">Password*</label>
-                             <input class="form-control shadow-none rounded-sm" type="password" id="passwordSignIn" required>
-                         </div>
-                         <div class="form-group col-12">
-                             <button class="btn btn-primary w-100 rounded-sm" type="submit">Sign In</button>
-                         </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-        </div>
-    </div>
-  </div>
+   @include('pages.signinM')
   <!-- signin-modal -->
   
-<header class="bg-blue shadow">
-   <div class="container-lg">
-      <nav class="navbar navbar-expand-xl navbar-dark px-0">
-         <a  class="navbar-brand" href="index-3.html">
-            <img id="logo-q" src="{{ asset('assets/assets/images/logo.png')}}" alt="logo" style="height:49px">
-         </a>
-         <form class="navbar-form search-only d-none d-md-flex" action="#" method="post">
-            <div class="input-group">
-              <input class="form-control border-0 bg-transparent" type="search" placeholder="Search" required>
-              <div class="input-group-append">
-                <button class="border-0 bg-transparent" type="submit"><i class="fas fa-search"></i></button>
-              </div>
-            </div>
-        </form>
-
-         <div class="d-none d-xl-flex align-items-center ml-auto">
-            <ul class="social-icons text-white list-unstyled mr-4">
-               <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-               <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-               <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-               <li><a href="#!"><i class="fab fa-skype"></i></a></li>
-            </ul>
-            <a href="#signin-modal" class="btn btn-sm btn-primary rounded-pill" data-toggle="modal" data-target="#signup-modal">Become A Tutor</a>
-         </div>
-
-         <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarNavAlt" aria-controls="navbarNavAlt" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fas fa-bars"></span>
-         </button>
-      </nav>
-   </div>
-   <div class="bg-white">
-      <div class="container-lg">
-         <nav class="navbar navbar-expand-xl has-nav-left navbar-light px-0 py-0 py-xl-3">
-            <div class="collapse navbar-collapse navbar-collapse-two" id="navbarNavAlt">
-               <ul class="navbar-nav mt-4 mt-xl-0 mx-auto ml-xl-0">
-                  <li class="nav-item dropdown active">
-                     <a class="nav-link dropdown-toggle" href="{{ route('index')}}" role="button" aria-haspopup="true" aria-expanded="false">
-                        Home
-                     </a>
-                     
-                  </li>
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        About <i class="fas fa-angle-down"></i>
-                     </a>
-                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('about')}}">About Us 01</a></li>
-                        <li><a class="dropdown-item" href="{{ route('about-2')}}">About Us 02</a></li>
-                        <li><a class="dropdown-item" href="{{ route('about-3')}}">About Us 03</a></li>
-                     </ul>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="{{ route('courses')}}">Courses</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="{{ route('blog')}}">Blog</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Pages <i class="fas fa-angle-down"></i>
-                     </a>
-                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('blog-details')}}">Blog Details</a></li>
-                     </ul>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="{{ route('contact')}}">Contact Us</a>
-                  </li>
-
-
-
-                  <!-- User Account-->
-                  
-               </ul>
-               @if(session()->has('user'))
-                 <!--session()->pull('user')-->
-               <div class ="ml-auto mt-3 mt-xl-0 mb-3 mb-xl-0 text-center text-xl-right">
-               <a class="btn btn-sm btn-link text-dark px-3" href="#"><i class="ti-user text-muted mr-2"></i> Profile</a>
-               <a class="btn btn-sm btn-link text-dark px-3" href="{{url('logout')}}"><i class="ti-lock text-muted mr-2"></i> Logout</a>
-               </div>
-               @else
-
-               <div class="ml-auto mt-3 mt-xl-0 mb-3 mb-xl-0 text-center text-xl-right">
-                  <a href="#!" class="btn btn-sm btn-link text-dark px-3" data-toggle="modal" data-target="#signin-modal"><i class="ti-key text-muted mr-2"></i>Signin</a>
-                  <a href="#!" class="btn btn-sm btn-link text-dark px-3" data-toggle="modal" data-target="#signup-modal"><i class="ti-write text-muted mr-2"></i>Signup</a>
-               </div>
-
-
-               @endif
-
-               
-            </div>
-         </nav>
-      </div>
-   </div>
-</header>
-
+  @include('pages.header')
 <!-- start of banner -->
 <section class="banner-3 has-overlay bg-cover" style="background-image: url(assets/assets/images/banner-image-02.jpg);">
    <div class="container">
@@ -338,11 +133,13 @@
 <section class="section-padding pt-0">
    <div class="container">
       <div class="row justify-content-center">
+         @if(! session()->has('user'))
          <div class="col-lg-4 col-md-5 col-sm-6 mt-40">
             <h2 class="section-title mb-20">Join Our Online Class with Best Courses</h2>
             <p class="mb-40">Dispatched entreaties boisterous say why stimulated. Certain forbade picture now</p>
-            <a href="#!" class="btn btn-outline-primary rounded-pill">Get Started</a>
+            <a href="#!"  data-toggle="modal" data-target="#signup-modal" class="btn btn-outline-primary rounded-pill">Get Started</a>
          </div>
+         @endif
          <div class="col-lg-4 col-md-5 col-sm-6">
             <div class="card course-card shadow mt-40">
                <img class="card-img-top" src="{{ asset('assets/assets/images/courses/07.jpg')}}" alt="">
@@ -500,12 +297,74 @@
          </div>
          <div class="col-lg-7 mt-4 mt-lg-0">
             <div class="owl-carousel image-gallery">
-               <img class="img-fluid rounded" src="{{ asset('assetsassets/images/gallery/01.jpg')}}" alt="">
-               <img class="img-fluid rounded" src="{{ asset('assetsassets/images/gallery/02.jpg')}}" alt="">
-               <img class="img-fluid rounded" src="{{ asset('assetsassets/images/gallery/03.jpg')}}" alt="">
+               <img class="img-fluid rounded" src="{{ asset('assets/assets/images/gallery/01.jpg')}}" alt="">
+               <img class="img-fluid rounded" src="{{ asset('assets/assets/images/gallery/02.jpg')}}" alt="">
+               <img class="img-fluid rounded" src="{{ asset('assets/assets/images/gallery/03.jpg')}}" alt="">
             </div>
          </div>
       </div>
+      @if(session()->has('user'))
+            <section class="section-padding pb-fix">
+               <div class="container">
+               <div class="row align-items-center mb-30">
+                  <div class="col-lg-9 text-center text-lg-left">
+                     <h2 class="section-title mb-0">Enrolled Cousers</h2>
+                  </div>
+                  <div class="col-lg-3 mt-4 mt-lg-0 text-center text-lg-right">
+                     <div class="nav-arrows">
+                        <span class="fas fa-chevron-left course-left"></span>
+                        <span class="fas fa-chevron-right course-right"></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="owl-carousel course-carousel">
+                        <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
+                           <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/001.png')}}" alt="">
+                           <span>Design</span>
+                        </a>
+                        
+                        <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
+                           <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/002.jpg')}}" alt="">
+                           <span>Web Development</span>
+                        </a>
+                        
+                        <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
+                           <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/003.png')}}" alt="">
+                           <span>Personal Development</span>
+                        </a>
+                        
+                        <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
+                           <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/004.jpg')}}" alt="">
+                           <span>Software Development</span>
+                        </a>
+                        
+                        <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
+                           <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/005.png')}}" alt="">
+                           <span>Computer Engineering</span>
+                        </a>
+                        
+                        <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
+                           <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/006.jpeg')}}" alt="">
+                           <span>Artifical Intelligence</span>
+                        </a>
+                        
+                        <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
+                           <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/007.jpeg')}}" alt="">
+                           <span>Cyber-Security</span>
+                        </a>
+                        
+                        <a class="h5 font-weight-600 text-blue text-center d-block mt-30" href="#!">
+                           <img class="img-fluid border mb-15" src="{{ asset('assets/assets/images/course-categories/008.png')}}" alt="">
+                           <span>Business</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      @else
       <div class="row mt-115">
          <div class="col-md-12">
             <div class="cta-section section-padding has-overlay bg-cover" style="background-image: url(assets/assets/images/cta-bg.jpg);">
@@ -520,6 +379,7 @@
             </div>
          </div>
       </div>
+      @endif
    </div>
 </section>
 <!-- end of section -->
@@ -714,126 +574,7 @@
 
 
 
-<footer class="footer-newsletter-overlap bg-blue">
-   <div class="container">
-   
-      <div class="pb-80 text-white">
-         <div class="row justify-content-between">
-            <div class="col-xl-4 col-lg-5 col-sm-8">
-               <h3 class="font-weight-bold mb-30">Latest Courses</h3>
-               <div class="row">
-                  <div class="col-xl-5 col-6">
-                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#!" class="text-light">
-                           <i class="fas fa-chevron-right small mr-2"></i> Rudy</a>
-                        </li>
-                        <li class="mb-2"><a href="#!" class="text-light">
-                           <i class="fas fa-chevron-right small mr-2"></i> Photoshop</a>
-                        </li>
-                        <li class="mb-2"><a href="#!" class="text-light">
-                           <i class="fas fa-chevron-right small mr-2"></i>Software Engineering</a>
-                        </li>
-                        <li class="mb-2"><a href="#!" class="text-light">
-                           <i class="fas fa-chevron-right small mr-2"></i>  Cobol</a>
-                        </li>
-                        <li class="mb-2"><a href="#!" class="text-light">
-                           <i class="fas fa-chevron-right small mr-2"></i> Hack</a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="col-xl-5 col-6">
-                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#!" class="text-light">
-                           <i class="fas fa-chevron-right small mr-2"></i> Fotran</a>
-                        </li>
-                        <li class="mb-2"><a href="#!" class="text-light">
-                           <i class="fas fa-chevron-right small mr-2"></i> Pascal</a>
-                        </li>
-                        <li class="mb-2"><a href="#!" class="text-light">
-                           <i class="fas fa-chevron-right small mr-2"></i> Lisp</a>
-                        </li>
-                        <li class="mb-2"><a href="#!" class="text-light">
-                           <i class="fas fa-chevron-right small mr-2"></i> My SQL</a>
-                        </li>
-                        <li class="mb-2"><a href="#!" class="text-light">
-                           <i class="fas fa-chevron-right small mr-2"></i> PHP</a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xl col-lg-3 col-sm-4 col-6 mt-5 mt-sm-0">
-               <h3 class="font-weight-bold mb-30">Our Pages</h3>
-               <ul class="list-unstyled">
-                  <li class="mb-2"><a href="about.html" class="text-light">
-                     <i class="fas fa-chevron-right small mr-2"></i> About</a>
-                  </li>
-                  <li class="mb-2"><a href="courses.html" class="text-light">
-                     <i class="fas fa-chevron-right small mr-2"></i> Courses</a>
-                  </li>
-                  <li class="mb-2"><a href="#!" class="text-light">
-                     <i class="fas fa-chevron-right small mr-2"></i> Gallery</a>
-                  </li>
-                  <li class="mb-2"><a href="job-board.html" class="text-light">
-                     <i class="fas fa-chevron-right small mr-2"></i> Career</a>
-                  </li>
-                  <li class="mb-2"><a href="contact.html" class="text-light">
-                     <i class="fas fa-chevron-right small mr-2"></i> Contact</a>
-                  </li>
-                   <li class="mb-2"><a href="index.html" class="text-light">
-                     <i class="fas fa-chevron-right small mr-2"></i>HomeTutor</a>
-                  </li>
-               </ul>
-            </div>
-            <div class="col-xl col-lg-3 col-sm-6 col-6 mt-5 mt-lg-0">
-               <h3 class="font-weight-bold mb-30">Valuable Links</h3>
-               <ul class="list-unstyled">
-                  <li class="mb-2"><a href="#!" class="text-light">
-                     <i class="fas fa-chevron-right small mr-2"></i> Pricing</a>
-                  </li>
-                  <li class="mb-2"><a href="#!" class="text-light">
-                     <i class="fas fa-chevron-right small mr-2"></i> Privacy</a>
-                  </li>
-                  <li class="mb-2"><a href="#!" class="text-light">
-                     <i class="fas fa-chevron-right small mr-2"></i> Conditions</a>
-                  </li>
-                  <li class="mb-2"><a href="#!" class="text-light">
-                     <i class="fas fa-chevron-right small mr-2"></i> Refund Policy</a>
-                  </li>
-                  <li class="mb-2"><a href="#!" class="text-light">
-                     <i class="fas fa-chevron-right small mr-2"></i> Our Product</a>
-                  </li>
-               </ul>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6 mt-5 mt-xl-0">
-               <img src="../../../www.s7template.com/tf/eduskills/images/logo.html" alt="">
-               <p class="mt-15">Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building.</p>
-               <div class="mt-30">
-                  <a href="#!" class="pr-3 text-light"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#!" class="p-3 text-light"><i class="fab fa-twitter"></i></a>
-                  <a href="#!" class="p-3 text-light"><i class="fab fa-instagram"></i></a>
-                  <a href="#!" class="p-3 text-light"><i class="fab fa-linkedin-in"></i></a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="footer-bottom text-light py-3 border-dark border-top">
-      <div class="container">
-         <div class="row align-items-center">
-            <div class="col-lg-9 text-center text-lg-left mb-3 mb-lg-0">
-            &copy; 2021 - {{date('Y')}} <span class="text-primary"><a href="{{ url('/')}}">PolyNekTechCommunity</a></span>. All Rights Reserved. 
-            </div>
-            <div class="col-lg-3 text-center text-lg-right">
-               <ul class="list-unstyled list-inline">
-                  <li class="list-inline-item"><a href="#!" class="p-2 d-block text-light">Privacy</a></li>
-                  <li class="list-inline-item"><a href="contact.html" class="p-2 d-block text-light">Contact us</a></li>
-               </ul>
-            </div>
-         </div>
-      </div>
-   </div>
-</footer>
+ @include('pages.footer')
 <a href="#top" class="scroll-to-top">
    <span class="fas fa-chevron-up"></span>
 </a>

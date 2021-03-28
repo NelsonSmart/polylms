@@ -6,19 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class AuthenticatedSessionController extends Controller
 {
-    /**
-     * Display the login view.
-     *
-     * @return \Illuminate\View\View
-     */
-    public function create()
-    {
-        return view('auth.login');
-    }
 
     /**
      * Handle an incoming authentication request.
@@ -28,11 +20,44 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
+        
         $request->authenticate();
 
-        $request->session()->regenerate();
+        $req = $request->email ;
 
-        return redirect(RouteServiceProvider::HOME);
+        $user = DB::table('users')->where('email', $req)
+        ->get();
+
+        foreach($user as $item){
+            if ($item->role == 0){
+                $request->session()->put('user', $user);
+    
+                return redirect()->intended('/');
+            }elseif($item->role == 2){
+                $request->session()->put('user', $user);
+    
+                return redirect()->intended('admin_');
+
+
+            }else{
+                return back()->withErrors([
+                    'email' => 'the provided credentials do not match our records.',
+                    ]);
+            }
+    
+            
+            
+
+        }
+
+        
+    }
+
+    function s(){
+        $dat = DB::table('users')->where('email', 'admin@adimn.com')
+        ->first();
+
+        return $dat->email;
     }
 
     /**
@@ -43,7 +68,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function destroy(Request $request)
     {
-        Auth::guard('web')->logout();
+       
 
         $request->session()->invalidate();
 

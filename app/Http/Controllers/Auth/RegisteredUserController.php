@@ -12,16 +12,10 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisteredUserController extends Controller
 {
-    /**
-     * Display the registration view.
-     *
-     * @return \Illuminate\View\View
-     */
-    public function create()
-    {
-        return view('auth.register');
-    }
 
+    public function index(){
+        return  view('pages.index');
+    }
     /**
      * Handle an incoming registration request.
      *
@@ -32,20 +26,29 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        $remember = true ;
+
         $request->validate([
-            'name' => 'required|string|max:255',
+            'fname' => 'required|string|max:255',
+            'lname' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|confirmed|min:8',
+            'password' => 'required|string|min:8',
+            'repassword' => 'required|string|min:8|same:password'
         ]);
 
         Auth::login($user = User::create([
-            'name' => $request->name,
+            'first_name' => $request->fname,
+            'last_name' => $request->lname,
+            'role' => $request->role,
+           'phone_number' => $request->pnumber,
+            'gender' => $request->customRadio,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-        ]));
+            'remember_token' => $remember,
+        ]), $remember = true);
 
         event(new Registered($user));
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect(RouteServiceProvider::HOME)-> with ('success', 'Account Created');
     }
 }
